@@ -196,7 +196,7 @@ h2 {
 .hero-picture img {
 	width: 70%;
 	clip-path: circle(50%);
-	animation: moving 6s ease-in-out infinite;
+	/* 	animation: moving 6s ease-in-out infinite; */
 }
 @keyframes moving {
 	0% {
