@@ -2,8 +2,8 @@
 .page-container {
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
-	grid-template-rows: 10px, auto, 100px, 100px, 100px, 100px, 60px, 100px,
-		60px, 20px;
+	grid-template-rows: 10px, auto, 100px, 100px, 100px, 100px, 60px, 100px, 60px,
+		20px;
 }
 /* grid layout for top menu and logo */
 .navbar-container {
@@ -67,7 +67,7 @@ a.menu-nav {
 }
 
 a.menu-nav::before {
-	content: "";
+	content: '';
 	position: absolute;
 	width: 0;
 	margin-top: 12px;
@@ -84,7 +84,7 @@ a.menu-nav:hover::before {
 
 /* for the active link to stay underlined  */
 a.menu-nav .active::before {
-	content: "";
+	content: '';
 	position: absolute;
 	width: 50%;
 	margin-top: 12px;
@@ -100,7 +100,7 @@ a.menu-nav .active::before {
 body {
 	margin: 0;
 	padding: 0;
-	font-family: "Roboto", sans-serif;
+	font-family: 'Roboto', sans-serif;
 	line-height: 1.4;
 	color: #cccccc;
 	background-color: #54595f;
@@ -198,7 +198,8 @@ h2 {
 	clip-path: circle(50%);
 	/* 	animation: moving 6s ease-in-out infinite; */
 }
-@keyframes moving {
+
+/* @keyframes moving {
 	0% {
 		transform: translateY(0px);
 	}
@@ -208,7 +209,7 @@ h2 {
 	100% {
 		transform: translateY(0px);
 	}
-}
+} */
 /* about me section */
 .about-me {
 	grid-column-start: 1;
@@ -236,7 +237,7 @@ h2 {
 	position: relative;
 }
 .about-me h2::before {
-	content: "";
+	content: '';
 	position: absolute;
 	width: 50%;
 	margin-top: 12px;
@@ -268,7 +269,7 @@ h2 {
 }
 
 .services-text h2::before {
-	content: "";
+	content: '';
 	position: absolute;
 	width: 12%;
 	margin-top: 12px;
@@ -280,10 +281,9 @@ h2 {
 
 .cards {
 	display: grid;
-	max-width: 1200px;
+	/* max-width: 1200px; */
 	column-gap: 2rem;
 	row-gap: 2rem;
-	border-radius: 10px;
 	margin-top: 60px;
 }
 
@@ -297,8 +297,6 @@ h2 {
 
 .card {
 	border-radius: 10px;
-	height: 315px;
-	width: 550px;
 }
 
 .card h3 {
@@ -327,7 +325,7 @@ h2 {
 			rgba(39, 150, 236, 0.9),
 			rgba(39, 150, 236, 0.9)
 		),
-		url("images/laptop.jpg"); /* Photo by XPS on Unsplash */
+		url('images/laptop.jpg'); /* Photo by XPS on Unsplash */
 }
 
 .card2 {
@@ -336,7 +334,7 @@ h2 {
 			rgba(250, 180, 32, 0.9),
 			rgba(250, 180, 32, 0.9)
 		),
-		url("images/desk.jpg"); /* Photo by JESHOOTS.COM on Unsplash */
+		url('images/desk.jpg'); /* Photo by JESHOOTS.COM on Unsplash */
 }
 .card3 {
 	background: linear-gradient(
@@ -344,7 +342,7 @@ h2 {
 			rgba(209, 61, 196, 0.9),
 			rgba(209, 61, 196, 0.9)
 		),
-		url("images/applicatin.jpg"); /* Photo by Kumpan Electric on Unsplash */
+		url('images/applicatin.jpg'); /* Photo by Kumpan Electric on Unsplash */
 }
 
 .card4 {
@@ -353,7 +351,7 @@ h2 {
 			rgba(22, 202, 80, 0.9),
 			rgba(22, 202, 80, 0.9)
 		),
-		url("images/web-design.jpg"); /* Photo by Campaign Creators on Unsplash*/
+		url('images/web-design.jpg'); /* Photo by Campaign Creators on Unsplash*/
 }
 
 /* Latest works section */
@@ -377,7 +375,7 @@ h2 {
 }
 
 .latest-works-text h2::before {
-	content: "";
+	content: '';
 	position: absolute;
 	width: 12%;
 	height: 4px;
@@ -426,9 +424,9 @@ h2 {
 		grid-template-columns: repeat(4, 200px);
 		grid-template-rows: repeat(3, 200px);
 		grid-template-areas:
-			"one one two three"
-			"one one four five"
-			"six seven eight eight";
+			'one one two three'
+			'one one four five'
+			'six seven eight eight';
 	}
 }
 
@@ -437,10 +435,10 @@ h2 {
 		grid-template-columns: repeat(2, 200px);
 		grid-template-rows: repeat(4, 200px);
 		grid-template-areas:
-			"one two "
-			"three four"
-			"five six"
-			"seven eight";
+			'one two '
+			'three four'
+			'five six'
+			'seven eight';
 	}
 }
 
@@ -450,14 +448,14 @@ h2 {
 		grid-template-columns: 1fr;
 		grid-template-rows: repeat(8, 400px);
 		grid-template-areas:
-			"one"
-			"two"
-			"three"
-			"four"
-			"five"
-			"six"
-			"seven"
-			"eight";
+			'one'
+			'two'
+			'three'
+			'four'
+			'five'
+			'six'
+			'seven'
+			'eight';
 	}
 }
 
@@ -569,7 +567,7 @@ h2 {
 }
 
 .work-experiences-container h2::before {
-	content: "";
+	content: '';
 	position: absolute;
 	width: 22%;
 	height: 4px;
@@ -668,7 +666,7 @@ h2 {
 }
 
 .hire-me-container h2::before {
-	content: "";
+	content: '';
 	position: absolute;
 	width: 16%;
 	height: 4px;
@@ -698,8 +696,8 @@ h2 {
 		grid-template-columns: repeat(3, 1fr);
 		grid-template-rows: (100px, 1fr);
 		grid-template-areas:
-			" . one . "
-			"two three three";
+			' . one . '
+			'two three three';
 	}
 
 	.phone-email {
@@ -713,9 +711,9 @@ h2 {
 		grid-template-columns: 1fr;
 		grid-template-rows: (100px, 1fr, 1fr);
 		grid-template-areas:
-			"one"
-			"two"
-			"three";
+			'one'
+			'two'
+			'three';
 	}
 	.form {
 		padding-right: 0px;
@@ -744,7 +742,7 @@ h2 {
 }
 
 .contact-me-container h2::before {
-	content: "";
+	content: '';
 	position: absolute;
 	width: 20%;
 	height: 4px;
@@ -769,7 +767,7 @@ h2 {
 	color: #cccccc;
 }
 
-input[type="text"] {
+input[type='text'] {
 	padding: 15px 20px;
 	margin: 10px 0px 18px 0px;
 	color: #777777;
@@ -803,7 +801,7 @@ textarea {
 	width: 100%;
 }
 
-input[type="submit"] {
+input[type='submit'] {
 	margin-top: 20px;
 }
 
