@@ -23,6 +23,9 @@
 			<!--  Logo and menu -->
 			<nav class="navbar-container">
 				<div class="logo"><a href="index.html">K.</a></div>
+				<button id="open" class="open">
+					<i class="fas fa-bars fa-2x"></i>
+				</button>
 				<ul>
 					<li><a class="menu-nav" href="#">Home</a></li>
 					<li><a class="menu-nav" href="#">About Me</a></li>
@@ -32,6 +35,24 @@
 					<li><a class="menu-nav" href="#">Blog</a></li>
 				</ul>
 			</nav>
+
+			<!-- modal for toggle menu on and off function - smaller screen view -->
+			<div class="modal-container" id="modal">
+					<div class="logo"><a href="index.html">K.</a></div>
+					<button class="close-btn" id="close">
+						<i class="fa fa-times fa-2x"></i>
+					</button>
+					<nav>
+						<ul>
+							<li><a class="menu-nav" href="#">Home</a></li>
+							<li><a class="menu-nav" href="#">About Me</a></li>
+							<li><a class="menu-nav" href="#">Services</a></li>
+							<li><a class="menu-nav" href="#">Portfolio</a></li>
+							<li><a class="menu-nav" href="#">Contact</a></li>
+							<li><a class="menu-nav" href="#">Blog</a></li>
+						</ul>
+					</nav>
+			</div>
 
 			<!--    Introduction section -->
 			<header class="hero-container">
@@ -313,6 +334,6 @@
 				<hr>
 				<p>Copyright © 2021 <span class="katia">Katia.</span></p>
 			</footer>
-		
+			<script src="script.js"></script>
 	</body>
 </html>
