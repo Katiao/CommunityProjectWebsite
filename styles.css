@@ -263,20 +263,24 @@ h2 {
 .hero-picture img {
 	width: 70%;
 	clip-path: circle(50%);
-	/* 	animation: moving 6s ease-in-out infinite; */
 }
 
-/* @keyframes moving {
-	0% {
-		transform: translateY(0px);
+/* scrolling animation */
+
+.box.show {
+	-webkit-animation: fadein 2s;
+	-moz-animation: fadein 2s;
+}
+
+@keyframes fadein {
+	from {
+		opacity: 0;
 	}
-	50% {
-		transform: translateY(-20px);
+	to {
+		opacity: 1;
 	}
-	100% {
-		transform: translateY(0px);
-	}
-} */
+}
+
 /* about me section */
 .about-me {
 	grid-column-start: 1;
@@ -629,6 +633,7 @@ h2 {
 }
 .work-experiences-container h2 {
 	font-size: 3rem;
+	text-align: center;
 	font-weight: 400px;
 	position: relative;
 }
@@ -639,7 +644,7 @@ h2 {
 	width: 22%;
 	height: 4px;
 	bottom: -10px;
-	left: 150px;
+	left: 250px;
 	right: 0;
 	background-color: #fdb533;
 }
