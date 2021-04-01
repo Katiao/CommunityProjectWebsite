@@ -1,3 +1,66 @@
+/* General styling */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	line-height: 1.4;
+	color: #cccccc;
+	background-color: #54595f;
+}
+
+a {
+	text-decoration: none;
+}
+
+h1,
+h2 {
+	color: whitesmoke;
+}
+
+/* general buttons styling */
+
+.yellow-button {
+	background-color: #fdb533;
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 60px;
+	padding: 0px 40px;
+	color: white;
+	border: 1px solid #fdb533;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+.yellow-button:hover {
+	background-color: #3c3c3d;
+	color: #fdb533;
+}
+
+.grey-button {
+	background-color: #3c3c3d;
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 60px;
+	padding: 0px 40px;
+	margin-left: 20px;
+	color: #fdb533;
+	border: 1px solid #fdb533;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+.grey-button:hover {
+	background-color: #fdb533;
+	color: #3c3c3d;
+}
+
 /* grid layout for the whole page */
 .page-container {
 	display: grid;
@@ -162,74 +225,6 @@ a.menu-nav .active::before {
 	transition: all 0.3s ease-in-out;
 }
 
-/* General styling */
-
-body {
-	margin: 0;
-	padding: 0;
-	font-family: 'Roboto', sans-serif;
-	line-height: 1.4;
-	color: #cccccc;
-	background-color: #54595f;
-}
-
-* {
-	box-sizing: border-box;
-}
-
-a {
-	text-decoration: none;
-}
-
-h1,
-h2 {
-	color: whitesmoke;
-}
-
-/* buttons styling */
-
-.yellow-button {
-	background-color: #fdb533;
-	font-weight: 500;
-	font-size: 20px;
-	line-height: 60px;
-	padding: 0px 40px;
-	color: white;
-	border: 1px solid #fdb533;
-	border-radius: 5px;
-	cursor: pointer;
-	transition: 0.5s;
-}
-
-.hero-text .yellow-button:hover {
-	background-color: #3c3c3d;
-	color: #fdb533;
-}
-
-.about-me-content .yellow-button:hover {
-	background-color: #3c3c3d;
-	color: #fdb533;
-}
-
-.grey-button {
-	background-color: #3c3c3d;
-	font-weight: 500;
-	font-size: 20px;
-	line-height: 60px;
-	padding: 0px 40px;
-	margin-left: 20px;
-	color: #fdb533;
-	border: 1px solid #fdb533;
-	border-radius: 5px;
-	cursor: pointer;
-	transition: 0.5s;
-}
-
-.grey-button:hover {
-	background-color: #fdb533;
-	color: #3c3c3d;
-}
-
 /* hero section */
 
 .hero-container {
@@ -254,6 +249,7 @@ h2 {
 	font-size: 23px;
 	font-weight: 400px;
 	margin-top: 10px;
+	margin-bottom: 50px;
 }
 
 .hero-picture {
@@ -268,15 +264,14 @@ h2 {
 /* scrolling animation */
 
 .box.show {
-	-webkit-animation: fadein 2s;
-	-moz-animation: fadein 2s;
+	animation: fadein 2s ease-out;
 }
 
 @keyframes fadein {
-	from {
+	0% {
 		opacity: 0;
 	}
-	to {
+	100% {
 		opacity: 1;
 	}
 }
@@ -314,7 +309,7 @@ h2 {
 	margin-top: 12px;
 	height: 4px;
 	bottom: -10px;
-	left: 10;
+	right: 25%;
 	background-color: #fdb533;
 }
 
@@ -348,6 +343,10 @@ h2 {
 	bottom: -10px;
 	left: 44%;
 	background-color: #fdb533;
+}
+
+.services-text p {
+	margin-top: 50px;
 }
 
 .cards {
@@ -448,16 +447,16 @@ h2 {
 .latest-works-text h2::before {
 	content: '';
 	position: absolute;
-	width: 12%;
+	width: 20%;
 	height: 4px;
 	bottom: -10px;
-	left: 285px;
-	right: 0;
+	left: 265px;
 	background-color: #fdb533;
 }
 
 .latest-works-text p {
 	text-align: center;
+	margin-top: 50px;
 }
 .latest-works-text ul {
 	display: flex;
@@ -466,6 +465,7 @@ h2 {
 	list-style: none;
 	margin-bottom: 40px;
 	color: whitesmoke;
+	justify-content: center;
 }
 .latest-works-text ul .active {
 	color: #feb633;
@@ -573,7 +573,6 @@ h2 {
 	height: 100%;
 	object-fit: cover;
 	opacity: 1;
-	/* display: block; */
 }
 
 .cardhover:hover img {
@@ -596,6 +595,14 @@ h2 {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+}
+
+.overlay h3 {
+	margin-bottom: 30px;
+}
+
+.overlay i {
+	margin-bottom: 20px;
 }
 
 /* adding the animation push up when hovering over: targeting every direct child of the overlay */
@@ -651,8 +658,9 @@ h2 {
 
 .work-experiences-container p {
 	line-height: 25px;
-	margin-top: 15px;
+	margin-top: 50px;
 	text-align: center;
+	margin-bottom: 50px;
 }
 
 .work-experiences-container h3 {
@@ -735,15 +743,16 @@ h2 {
 	font-size: 3rem;
 	font-weight: 400px;
 	position: relative;
+	margin-bottom: 50px;
 }
 
 .hire-me-container h2::before {
 	content: '';
 	position: absolute;
-	width: 16%;
+	width: 30%;
 	height: 4px;
 	bottom: -10px;
-	left: 230px;
+	left: 240px;
 	right: 0;
 	background-color: #fdb533;
 }
@@ -810,7 +819,7 @@ h2 {
 	font-size: 3rem;
 	font-weight: 400px;
 	position: relative;
-	margin-top: 0px;
+	margin-bottom: 50px;
 }
 
 .contact-me-container h2::before {
