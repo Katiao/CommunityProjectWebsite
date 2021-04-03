@@ -1,9 +1,11 @@
 /* General styling */
 
-* {
+*,
+*::after,
+*::before {
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;
+	box-sizing: inherit;
 }
 
 body {
@@ -11,6 +13,11 @@ body {
 	line-height: 1.4;
 	color: #cccccc;
 	background-color: #54595f;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
 }
 
 a {
@@ -27,12 +34,12 @@ h2 {
 .yellow-button {
 	background-color: #fdb533;
 	font-weight: 500;
-	font-size: 20px;
-	line-height: 60px;
-	padding: 0px 40px;
+	font-size: 2rem;
+	line-height: 6rem;
+	padding: 0 4rem;
 	color: white;
-	border: 1px solid #fdb533;
-	border-radius: 5px;
+	border: 0.1rem solid #fdb533;
+	border-radius: 0.5rem;
 	cursor: pointer;
 	transition: 0.5s;
 }
@@ -45,13 +52,13 @@ h2 {
 .grey-button {
 	background-color: #3c3c3d;
 	font-weight: 500;
-	font-size: 20px;
-	line-height: 60px;
-	padding: 0px 40px;
-	margin-left: 20px;
+	font-size: 2rem;
+	line-height: 6rem;
+	padding: 0 4rem;
+	margin-left: 2rem;
 	color: #fdb533;
-	border: 1px solid #fdb533;
-	border-radius: 5px;
+	border: 0.1rem solid #fdb533;
+	border-radius: 0.5rem;
 	cursor: pointer;
 	transition: 0.5s;
 }
@@ -65,8 +72,8 @@ h2 {
 .page-container {
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
-	grid-template-rows: 10px, auto, 100px, 100px, 100px, 100px, 60px, 100px, 60px,
-		20px;
+	grid-template-rows: 1rem, auto, 10rem, 10rem, 10rem, 10rem, 6rem, 10rem, 6rem,
+		2rem;
 }
 /* grid layout for top menu and logo */
 .navbar-container {
@@ -84,9 +91,9 @@ h2 {
 		grid-column-start: 6;
 		grid-column-end: 12;
 		list-style-type: none;
-		padding-right: 80px;
-		padding-left: 120px;
-		padding-top: 20px;
+		padding-right: 8rem;
+		padding-left: 12rem;
+		padding-top: 2rem;
 		display: flex;
 		justify-content: space-between;
 	}
@@ -110,7 +117,7 @@ h2 {
 	top: 0;
 	left: 0;
 	right: 0;
-	height: 320px;
+	height: 32rem;
 	z-index: 100;
 }
 
@@ -119,7 +126,7 @@ h2 {
 }
 
 .modal-container ul li {
-	margin-bottom: 10px;
+	margin-bottom: 1rem;
 }
 
 .modal-container button {
@@ -128,7 +135,7 @@ h2 {
 	color: #fff;
 	cursor: pointer;
 	position: absolute;
-	top: 30px;
+	top: 3rem;
 	right: 0;
 }
 
@@ -147,8 +154,8 @@ h2 {
 	border: #2b2c2c;
 	color: #fff;
 	position: absolute;
-	top: 20px;
-	right: 20px;
+	top: 2rem;
+	right: 2rem;
 	cursor: pointer;
 }
 
@@ -158,10 +165,10 @@ h2 {
 	grid-column-start: 1;
 	grid-column-end: 2;
 	font-weight: 900;
-	font-size: 50px;
-	line-height: 60px;
-	margin-left: 100px;
-	margin-top: 15px;
+	font-size: 5rem;
+	line-height: 6rem;
+	margin-left: 10rem;
+	margin-top: 1.5rem;
 }
 
 .logo a {
@@ -174,7 +181,7 @@ nav {
 }
 
 .menu-nav {
-	font-size: 14px;
+	font-size: 1.4rem;
 	color: #fff;
 	font-weight: 700;
 }
@@ -193,15 +200,15 @@ nav {
 
 a.menu-nav {
 	position: relative;
-	margin-bottom: 5px;
+	margin-bottom: 0.5rem;
 }
 
 a.menu-nav::before {
 	content: '';
 	position: absolute;
 	width: 0;
-	margin-top: 12px;
-	height: 2px;
+	margin-top: 1.2rem;
+	height: 0.2rem;
 	bottom: 0;
 	left: 10;
 	background-color: #fdb533;
@@ -217,8 +224,8 @@ a.menu-nav .active::before {
 	content: '';
 	position: absolute;
 	width: 50%;
-	margin-top: 12px;
-	height: 2px;
+	margin-top: 1.2rem;
+	height: 0.2rem;
 	bottom: 0;
 	left: 10;
 	background-color: #fdb533;
@@ -231,29 +238,29 @@ a.menu-nav .active::before {
 	grid-column-start: 1;
 	grid-column-end: -1;
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(436px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(43.6rem, 1fr));
 	justify-items: center;
 	align-items: center;
 	background-color: #2b2c2c;
-	padding-top: 100px;
-	padding-bottom: 100px;
+	padding-top: 10rem;
+	padding-bottom: 10rem;
 }
 
 .hero-text h1 {
 	font-weight: 700;
 	font-size: 4rem;
-	margin-bottom: 5px;
+	margin-bottom: 0.5rem;
 }
 
 .hero-text h3 {
-	font-size: 23px;
-	font-weight: 400px;
-	margin-top: 10px;
-	margin-bottom: 50px;
+	font-size: 2.3rem;
+	font-weight: 40rem;
+	margin-top: 1rem;
+	margin-bottom: 5rem;
 }
 
 .hero-picture {
-	padding-left: 140px;
+	padding-left: 14rem;
 }
 
 .hero-picture img {
@@ -264,7 +271,8 @@ a.menu-nav .active::before {
 /* scrolling animation */
 
 .box.show {
-	animation: fadein 2s ease-out;
+	animation: fadein 2s ease-out 0.15s;
+	animation-fill-mode: backwards;
 }
 
 @keyframes fadein {
@@ -281,34 +289,34 @@ a.menu-nav .active::before {
 	grid-column-start: 1;
 	grid-column-end: -1;
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(436px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(43.6rem, 1fr));
 	justify-items: center;
 	align-items: center;
 	background-color: #3c3c3d;
-	padding-top: 100px;
-	padding-bottom: 100px;
+	padding-top: 10rem;
+	padding-bottom: 10rem;
 }
 
 .about-me-content {
-	padding-right: 150px;
+	padding-right: 15rem;
 }
 
 .about-me-content p {
-	margin-bottom: 40px;
+	margin-bottom: 4rem;
 }
 
 .about-me h2 {
 	font-size: 3rem;
-	font-weight: 400px;
+	font-weight: 40rem;
 	position: relative;
 }
 .about-me h2::before {
 	content: '';
 	position: absolute;
 	width: 50%;
-	margin-top: 12px;
-	height: 4px;
-	bottom: -10px;
+	margin-top: 1.2rem;
+	height: 0.4;
+	bottom: -1rem;
 	right: 25%;
 	background-color: #fdb533;
 }
@@ -323,14 +331,14 @@ a.menu-nav .active::before {
 	justify-items: center;
 	align-items: center;
 	background-color: #2b2c2c;
-	padding-top: 50px;
-	padding-bottom: 100px;
+	padding-top: 5rem;
+	padding-bottom: 10rem;
 }
 
 .services-text h2 {
 	text-align: center;
 	font-size: 3rem;
-	font-weight: 400px;
+	font-weight: 40rem;
 	position: relative;
 }
 
@@ -338,23 +346,23 @@ a.menu-nav .active::before {
 	content: '';
 	position: absolute;
 	width: 12%;
-	margin-top: 12px;
-	height: 4px;
-	bottom: -10px;
+	margin-top: 1.2rem;
+	height: 0.4rem;
+	bottom: -1rem;
 	left: 44%;
 	background-color: #fdb533;
 }
 
 .services-text p {
-	margin-top: 50px;
+	margin-top: 5rem;
 }
 
 .cards {
 	display: grid;
-	/* max-width: 1200px; */
+	/* max-width: 120rem; */
 	column-gap: 2rem;
 	row-gap: 2rem;
-	margin-top: 60px;
+	margin-top: 6rem;
 }
 
 /* is the screen larger than 600 pixels? then make it two columns */
@@ -366,26 +374,26 @@ a.menu-nav .active::before {
 }
 
 .card {
-	border-radius: 10px;
+	border-radius: 1rem;
 }
 
 .card h3 {
-	padding: 20px 60px 5px 100px;
-	margin-bottom: 10px;
+	padding: 2rem 6rem 0.5rem 10rem;
+	margin-bottom: 1rem;
 	margin-top: 0;
 	color: white;
-	font-size: 32px;
+	font-size: 3.2rem;
 }
 
 .card p {
-	padding: 0px 100px 80px 100px;
+	padding: 0 10rem 8rem 10rem;
 	margin: 0;
-	line-height: 30px;
+	line-height: 3rem;
 	color: white;
 }
 
 .cards i {
-	padding: 60px 100px 5px 100px;
+	padding: 6rem 10rem 0.5rem 10rem;
 	margin-bottom: 0;
 }
 
@@ -433,14 +441,14 @@ a.menu-nav .active::before {
 	grid-template-columns: 1fr;
 	justify-items: center;
 	align-items: center;
-	padding-top: 50px;
-	padding-bottom: 100px;
+	padding-top: 5rem;
+	padding-bottom: 10rem;
 }
 
 .latest-works-text h2 {
 	text-align: center;
 	font-size: 3rem;
-	font-weight: 400px;
+	font-weight: 40rem;
 	position: relative;
 }
 
@@ -448,22 +456,22 @@ a.menu-nav .active::before {
 	content: '';
 	position: absolute;
 	width: 20%;
-	height: 4px;
-	bottom: -10px;
-	left: 265px;
+	height: 0.4rem;
+	bottom: -1rem;
+	left: 26.5rem;
 	background-color: #fdb533;
 }
 
 .latest-works-text p {
 	text-align: center;
-	margin-top: 50px;
+	margin-top: 5rem;
 }
 .latest-works-text ul {
 	display: flex;
-	padding-top: 50px;
-	gap: 42px;
+	padding-top: 5rem;
+	gap: 4.2rem;
 	list-style: none;
-	margin-bottom: 40px;
+	margin-bottom: 4rem;
 	color: whitesmoke;
 	justify-content: center;
 }
@@ -486,14 +494,14 @@ a.menu-nav .active::before {
 	grid-column-start: 1;
 	grid-column-end: -1;
 	display: grid;
-	gap: 15px;
-	padding-top: 50px;
+	gap: 1.5rem;
+	padding-top: 5rem;
 }
 
 @media (min-width: 910px) {
 	.latest-works-cards {
-		grid-template-columns: repeat(4, 200px);
-		grid-template-rows: repeat(3, 200px);
+		grid-template-columns: repeat(4, 20rem);
+		grid-template-rows: repeat(3, 20rem);
 		grid-template-areas:
 			'one one two three'
 			'one one four five'
@@ -503,8 +511,8 @@ a.menu-nav .active::before {
 
 @media (max-width: 909px) and (min-width: 500px) {
 	.latest-works-cards {
-		grid-template-columns: repeat(2, 200px);
-		grid-template-rows: repeat(4, 200px);
+		grid-template-columns: repeat(2, 20rem);
+		grid-template-rows: repeat(4, 20rem);
 		grid-template-areas:
 			'one two '
 			'three four'
@@ -517,7 +525,7 @@ a.menu-nav .active::before {
 	.latest-works-cards {
 		display: grid;
 		grid-template-columns: 1fr;
-		grid-template-rows: repeat(8, 400px);
+		grid-template-rows: repeat(8, 40rem);
 		grid-template-areas:
 			'one'
 			'two'
@@ -585,9 +593,9 @@ a.menu-nav .active::before {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	bottom: 45px;
+	bottom: 4.5rem;
 	opacity: 0;
-	line-height: 10px;
+	line-height: 1rem;
 	transition: all 0.6s;
 	background: rgba(247, 212, 86, 0.7);
 	color: white;
@@ -598,17 +606,17 @@ a.menu-nav .active::before {
 }
 
 .overlay h3 {
-	margin-bottom: 30px;
+	margin-bottom: 3rem;
 }
 
 .overlay i {
-	margin-bottom: 20px;
+	margin-bottom: 2rem;
 }
 
 /* adding the animation push up when hovering over: targeting every direct child of the overlay */
 
 .overlay > * {
-	transform: translateY(20px);
+	transform: translateY(2rem);
 	transition: transform 0.6s;
 }
 
@@ -630,10 +638,10 @@ a.menu-nav .active::before {
 	grid-column-start: 1;
 	grid-column-end: -1;
 	background-color: #3c3c3d;
-	padding-top: 50px;
-	padding-bottom: 50px;
+	padding-top: 5rem;
+	padding-bottom: 5rem;
 	display: grid;
-	gap: 15px;
+	gap: 1.5rem;
 	grid-template-columns: 1fr;
 	justify-items: center;
 	align-items: center;
@@ -641,7 +649,7 @@ a.menu-nav .active::before {
 .work-experiences-container h2 {
 	font-size: 3rem;
 	text-align: center;
-	font-weight: 400px;
+	font-weight: 40rem;
 	position: relative;
 }
 
@@ -649,59 +657,59 @@ a.menu-nav .active::before {
 	content: '';
 	position: absolute;
 	width: 22%;
-	height: 4px;
-	bottom: -10px;
-	left: 250px;
+	height: 0.4rem;
+	bottom: -1rem;
+	left: 25rem;
 	right: 0;
 	background-color: #fdb533;
 }
 
 .work-experiences-container p {
-	line-height: 25px;
-	margin-top: 50px;
+	line-height: 2.5rem;
+	margin-top: 5rem;
 	text-align: center;
-	margin-bottom: 50px;
+	margin-bottom: 5rem;
 }
 
 .work-experiences-container h3 {
 	margin: 0;
 	color: white;
-	font-size: 22px;
-	font-weight: 500px;
+	font-size: 2.2rem;
+	font-weight: 50rem;
 }
 
 .company {
-	margin-top: 5px;
-	font-size: 15px;
+	margin-top: 0.5rem;
+	font-size: 1.5rem;
 	color: gray;
 }
 
 .date {
-	margin-bottom: 5px;
-	font-size: 15px;
+	margin-bottom: 0.5rem;
+	font-size: 1.5rem;
 	color: gray;
 }
 
 .works-cards-container {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	padding-right: 100px;
-	padding-left: 100px;
+	padding-right: 10rem;
+	padding-left: 10rem;
 }
 
 @media (max-width: 764px) {
 	.works-cards-container {
 		display: grid;
 		grid-template-columns: 1fr;
-		grid-template-rows: repeat(3, 300px);
+		grid-template-rows: repeat(3, 30rem);
 	}
 }
 
 .works-card {
 	border: solid;
-	border-width: 1px;
+	border-width: 0.1rem;
 	border-color: gray;
-	padding: 80px 30px;
+	padding: 8rem 3rem;
 }
 
 .works-card:hover {
@@ -730,10 +738,10 @@ a.menu-nav .active::before {
 .hire-me-container {
 	grid-column-start: 1;
 	grid-column-end: -1;
-	padding-top: 50px;
-	padding-bottom: 50px;
+	padding-top: 5rem;
+	padding-bottom: 5rem;
 	display: grid;
-	gap: 15px;
+	gap: 1.5rem;
 	grid-template-columns: 1fr;
 	justify-items: center;
 	align-items: center;
@@ -741,18 +749,18 @@ a.menu-nav .active::before {
 
 .hire-me-container h2 {
 	font-size: 3rem;
-	font-weight: 400px;
+	font-weight: 40rem;
 	position: relative;
-	margin-bottom: 50px;
+	margin-bottom: 5rem;
 }
 
 .hire-me-container h2::before {
 	content: '';
 	position: absolute;
 	width: 30%;
-	height: 4px;
-	bottom: -10px;
-	left: 240px;
+	height: 0.4rem;
+	bottom: -1rem;
+	left: 24rem;
 	right: 0;
 	background-color: #fdb533;
 }
@@ -763,10 +771,10 @@ a.menu-nav .active::before {
 	grid-column-start: 1;
 	grid-column-end: -1;
 	background-color: #3c3c3d;
-	padding-top: 80px;
-	padding-bottom: 50px;
+	padding-top: 8rem;
+	padding-bottom: 5rem;
 	display: grid;
-	gap: 15px;
+	gap: 1.5rem;
 	grid-template-columns: 1fr;
 	align-items: flex-start;
 	justify-content: flex-start;
@@ -775,7 +783,7 @@ a.menu-nav .active::before {
 @media (min-width: 765px) {
 	.contact-me-container {
 		grid-template-columns: repeat(3, 1fr);
-		grid-template-rows: (100px, 1fr);
+		grid-template-rows: (10rem, 1fr);
 		grid-template-areas:
 			' . one . '
 			'two three three';
@@ -790,21 +798,21 @@ a.menu-nav .active::before {
 @media (max-width: 764px) {
 	.contact-me-container {
 		grid-template-columns: 1fr;
-		grid-template-rows: (100px, 1fr, 1fr);
+		grid-template-rows: (10rem, 1fr, 1fr);
 		grid-template-areas:
 			'one'
 			'two'
 			'three';
 	}
 	.form {
-		padding-right: 0px;
-		padding-left: 50px;
+		padding-right: 0;
+		padding-left: 5rem;
 	}
 }
 
 .contact-title {
 	grid-area: one;
-	padding-left: 50px;
+	padding-left: 5rem;
 }
 
 .contact-info {
@@ -817,18 +825,18 @@ a.menu-nav .active::before {
 
 .contact-me-container h2 {
 	font-size: 3rem;
-	font-weight: 400px;
+	font-weight: 40rem;
 	position: relative;
-	margin-bottom: 50px;
+	margin-bottom: 5rem;
 }
 
 .contact-me-container h2::before {
 	content: '';
 	position: absolute;
 	width: 20%;
-	height: 4px;
-	bottom: -10px;
-	left: 130px;
+	height: 0.4rem;
+	bottom: -1rem;
+	left: 13rem;
 	right: 0;
 	background-color: #fdb533;
 }
@@ -841,7 +849,7 @@ a.menu-nav .active::before {
 }
 
 .form {
-	padding-right: 100px;
+	padding-right: 10rem;
 }
 
 .form label {
@@ -849,41 +857,41 @@ a.menu-nav .active::before {
 }
 
 input[type='text'] {
-	padding: 15px 20px;
-	margin: 10px 0px 18px 0px;
+	padding: 1.5rem 2rem;
+	margin: 1rem 0 1.8rem 0;
 	color: #777777;
 	background-color: #363737;
 	border: none;
 	font-weight: 400;
-	font-size: 15px;
-	height: 60px;
+	font-size: 1.5rem;
+	height: 6rem;
 	outline: none;
 }
 textarea {
-	padding: 15px 20px;
-	margin: 10px 0px 18px 0px;
+	padding: 1.5rem 2rem;
+	margin: 1rem 0 1.8rem 0;
 	color: #777777;
 	background-color: #363737;
 	border: none;
-	height: 200px;
+	height: 20rem;
 	font-weight: 400;
-	font-size: 15px;
+	font-size: 1.5rem;
 	transition: all 0.25s ease;
 	outline: none;
 }
 
 .phone {
-	padding-right: 20px;
+	padding-right: 2rem;
 	width: 100%;
 }
 
 .email {
-	padding-left: 20px;
+	padding-left: 2rem;
 	width: 100%;
 }
 
 input[type='submit'] {
-	margin-top: 20px;
+	margin-top: 2rem;
 }
 
 .form .yellow-button:hover {
@@ -894,16 +902,16 @@ input[type='submit'] {
 /* styling contact information section */
 
 .contact-info h4 {
-	margin-bottom: 30px;
-	margin-top: 5px;
-	font-size: 1.17em;
+	margin-bottom: 3rem;
+	margin-top: 0.5rem;
+	font-size: 1.5rem;
 	font-weight: bold;
 	color: whitesmoke;
 }
 
 .contact-info {
 	color: #cccccc;
-	padding-left: 100px;
+	padding-left: 10rem;
 }
 
 .contact-info ul {
@@ -913,9 +921,9 @@ input[type='submit'] {
 }
 
 .follow-me {
-	margin-bottom: 5px;
-	margin-top: 30px;
-	font-size: 1.17em;
+	margin-bottom: 0.5rem;
+	margin-top: 3rem;
+	font-size: 1.5rem;
 	color: whitesmoke;
 }
 
@@ -933,10 +941,10 @@ input[type='submit'] {
 .closing-container {
 	grid-column-start: 1;
 	grid-column-end: -1;
-	padding-top: 50px;
-	padding-bottom: 50px;
+	padding-top: 5rem;
+	padding-bottom: 5rem;
 	display: grid;
-	gap: 15px;
+	gap: 1.5rem;
 	grid-template-columns: 1fr;
 	justify-items: center;
 	align-items: center;
@@ -944,8 +952,8 @@ input[type='submit'] {
 
 .logo-end {
 	font-weight: 900;
-	font-size: 50px;
-	line-height: 60px;
+	font-size: 5rem;
+	line-height: 6rem;
 	color: #fbd214;
 }
 
@@ -959,7 +967,7 @@ input[type='submit'] {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
-	font-size: 2em;
+	font-size: 2rem;
 }
 
 .closing-container a {
@@ -975,8 +983,8 @@ input[type='submit'] {
 footer {
 	grid-column-start: 1;
 	grid-column-end: -1;
-	padding-top: 30px;
-	padding-bottom: 10px;
+	padding-top: 3rem;
+	padding-bottom: 1rem;
 }
 
 footer p {
