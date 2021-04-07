@@ -15,7 +15,7 @@ body {
 	background-color: #54595f;
 	box-sizing: border-box;
 }
-
+/* this defines what 1 rem is */
 html {
 	font-size: 62.5%;
 }
@@ -24,9 +24,18 @@ a {
 	text-decoration: none;
 }
 
-h1,
+h1 {
+	color: whitesmoke;
+	font-size: 6rem;
+}
+
 h2 {
 	color: whitesmoke;
+	font-size: 5rem;
+}
+
+p {
+	font-size: 1.5rem;
 }
 
 /* general buttons styling */
@@ -248,7 +257,6 @@ a.menu-nav .active::before {
 
 .hero-text h1 {
 	font-weight: 700;
-	font-size: 4rem;
 	margin-bottom: 0.5rem;
 }
 
@@ -306,7 +314,6 @@ a.menu-nav .active::before {
 }
 
 .about-me h2 {
-	font-size: 3rem;
 	font-weight: 40rem;
 	position: relative;
 }
@@ -315,7 +322,7 @@ a.menu-nav .active::before {
 	position: absolute;
 	width: 50%;
 	margin-top: 1.2rem;
-	height: 0.4;
+	height: 0.4rem;
 	bottom: -1rem;
 	right: 25%;
 	background-color: #fdb533;
@@ -337,7 +344,6 @@ a.menu-nav .active::before {
 
 .services-text h2 {
 	text-align: center;
-	font-size: 3rem;
 	font-weight: 40rem;
 	position: relative;
 }
@@ -447,7 +453,6 @@ a.menu-nav .active::before {
 
 .latest-works-text h2 {
 	text-align: center;
-	font-size: 3rem;
 	font-weight: 40rem;
 	position: relative;
 }
@@ -482,6 +487,7 @@ a.menu-nav .active::before {
 
 .latest-works-text ul li {
 	cursor: pointer;
+	font-size: 1.8rem;
 }
 
 .latest-works-text ul li:hover {
@@ -647,7 +653,6 @@ a.menu-nav .active::before {
 	align-items: center;
 }
 .work-experiences-container h2 {
-	font-size: 3rem;
 	text-align: center;
 	font-weight: 40rem;
 	position: relative;
@@ -748,7 +753,6 @@ a.menu-nav .active::before {
 }
 
 .hire-me-container h2 {
-	font-size: 3rem;
 	font-weight: 40rem;
 	position: relative;
 	margin-bottom: 5rem;
@@ -824,7 +828,6 @@ a.menu-nav .active::before {
 }
 
 .contact-me-container h2 {
-	font-size: 3rem;
 	font-weight: 40rem;
 	position: relative;
 	margin-bottom: 5rem;
@@ -905,7 +908,7 @@ input[type='submit'] {
 .contact-info h4 {
 	margin-bottom: 3rem;
 	margin-top: 0.5rem;
-	font-size: 1.5rem;
+	font-size: 2rem;
 	font-weight: bold;
 	color: whitesmoke;
 }
@@ -917,6 +920,7 @@ input[type='submit'] {
 
 .contact-info ul {
 	list-style-type: none;
+	font-size: 1.3rem;
 	margin: 0;
 	padding: 0;
 }
@@ -924,7 +928,8 @@ input[type='submit'] {
 .follow-me {
 	margin-bottom: 0.5rem;
 	margin-top: 3rem;
-	font-size: 1.5rem;
+	font-size: 2rem;
+	font-weight: bold;
 	color: whitesmoke;
 }
 
