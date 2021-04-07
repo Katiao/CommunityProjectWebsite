@@ -856,7 +856,7 @@ a.menu-nav .active::before {
 	color: #cccccc;
 }
 
-input[type='text'] {
+input {
 	padding: 1.5rem 2rem;
 	margin: 1rem 0 1.8rem 0;
 	color: #777777;
@@ -867,6 +867,7 @@ input[type='text'] {
 	height: 6rem;
 	outline: none;
 }
+
 textarea {
 	padding: 1.5rem 2rem;
 	margin: 1rem 0 1.8rem 0;
