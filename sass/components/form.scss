@@ -1,0 +1,172 @@
+/* contact me section */
+
+.contact-me-container {
+	grid-column-start: 1;
+	grid-column-end: -1;
+	background-color: #3c3c3d;
+	padding-top: 8rem;
+	padding-bottom: 5rem;
+	display: grid;
+	gap: 1.5rem;
+	grid-template-columns: 1fr;
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+
+@media (min-width: 765px) {
+	.contact-me-container {
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: (10rem, 1fr);
+		grid-template-areas:
+			' . one . '
+			'two three three';
+	}
+
+	.phone-email {
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+@media (max-width: 764px) {
+	.contact-me-container {
+		grid-template-columns: 1fr;
+		grid-template-rows: (10rem, 1fr, 1fr);
+		grid-template-areas:
+			'one'
+			'two'
+			'three';
+	}
+	.form {
+		padding-right: 0;
+		padding-left: 5rem;
+	}
+}
+
+.contact-title {
+	grid-area: one;
+	padding-left: 5rem;
+}
+
+.contact-info {
+	grid-area: two;
+}
+
+.form {
+	grid-area: three;
+}
+
+.contact-me-container h2 {
+	font-weight: 40rem;
+	position: relative;
+	margin-bottom: 5rem;
+}
+
+.contact-me-container h2::before {
+	content: '';
+	position: absolute;
+	width: 20%;
+	height: 0.4rem;
+	bottom: -1rem;
+	left: 13rem;
+	right: 0;
+	background-color: #fdb533;
+}
+
+/* styling form  */
+
+.block {
+	display: block;
+	width: 100%;
+}
+
+.form {
+	padding-right: 10rem;
+}
+
+.form label {
+	color: #cccccc;
+}
+
+input {
+	padding: 1.5rem 2rem;
+	margin: 1rem 0 1.8rem 0;
+	color: #777777;
+	background-color: #363737;
+	border: none;
+	font-weight: 400;
+	font-size: 1.5rem;
+	height: 6rem;
+	outline: none;
+}
+
+textarea {
+	padding: 1.5rem 2rem;
+	margin: 1rem 0 1.8rem 0;
+	color: #777777;
+	background-color: #363737;
+	border: none;
+	height: 20rem;
+	font-weight: 400;
+	font-size: 1.5rem;
+	transition: all 0.25s ease;
+	outline: none;
+}
+
+.phone {
+	padding-right: 2rem;
+	width: 100%;
+}
+
+.email {
+	padding-left: 2rem;
+	width: 100%;
+}
+
+input[type='submit'] {
+	margin-top: 2rem;
+}
+
+.form .yellow-button:hover {
+	background-color: #3c3c3d;
+	color: #fdb533;
+}
+
+/* styling contact information section */
+
+.contact-info h4 {
+	margin-bottom: 3rem;
+	margin-top: 0.5rem;
+	font-size: 2rem;
+	font-weight: bold;
+	color: whitesmoke;
+}
+
+.contact-info {
+	color: #cccccc;
+	padding-left: 10rem;
+}
+
+.contact-info ul {
+	list-style-type: none;
+	font-size: 1.3rem;
+	margin: 0;
+	padding: 0;
+}
+
+.follow-me {
+	margin-bottom: 0.5rem;
+	margin-top: 3rem;
+	font-size: 2rem;
+	font-weight: bold;
+	color: whitesmoke;
+}
+
+.follow a {
+	color: #cccccc;
+	text-decoration: none;
+}
+
+.follow a:hover {
+	color: #fdb533;
+}

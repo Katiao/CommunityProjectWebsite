@@ -1,0 +1,109 @@
+/* 	Services Section */
+
+.services-container {
+	grid-column-start: 1;
+	grid-column-end: -1;
+	display: grid;
+	grid-template-columns: 1fr;
+	justify-items: center;
+	align-items: center;
+	background-color: #2b2c2c;
+	padding-top: 5rem;
+	padding-bottom: 10rem;
+}
+
+.services-text h2 {
+	text-align: center;
+	font-weight: 40rem;
+	position: relative;
+}
+
+.services-text h2::before {
+	content: '';
+	position: absolute;
+	width: 12%;
+	margin-top: 1.2rem;
+	height: 0.4rem;
+	bottom: -1rem;
+	left: 44%;
+	background-color: #fdb533;
+}
+
+.services-text p {
+	margin-top: 5rem;
+}
+
+.cards {
+	display: grid;
+	/* max-width: 120rem; */
+	column-gap: 2rem;
+	row-gap: 2rem;
+	margin-top: 6rem;
+}
+
+/* is the screen larger than 600 pixels? then make it two columns */
+
+@media (min-width: 600px) {
+	.cards {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+.card {
+	border-radius: 1rem;
+}
+
+.card h3 {
+	padding: 2rem 6rem 0.5rem 10rem;
+	margin-bottom: 1rem;
+	margin-top: 0;
+	color: white;
+	font-size: 3.2rem;
+}
+
+.card p {
+	padding: 0 10rem 8rem 10rem;
+	margin: 0;
+	line-height: 3rem;
+	color: white;
+}
+
+.cards i {
+	padding: 6rem 10rem 0.5rem 10rem;
+	margin-bottom: 0;
+}
+
+.card1 {
+	background: linear-gradient(
+			to right,
+			rgba(39, 150, 236, 0.9),
+			rgba(39, 150, 236, 0.9)
+		),
+		url('images/laptop.jpg'); /* Photo by XPS on Unsplash */
+}
+
+.card2 {
+	background: linear-gradient(
+			to right,
+			rgba(250, 180, 32, 0.9),
+			rgba(250, 180, 32, 0.9)
+		),
+		url('images/desk.jpg'); /* Photo by JESHOOTS.COM on Unsplash */
+}
+.card3 {
+	background: linear-gradient(
+			to right,
+			rgba(209, 61, 196, 0.9),
+			rgba(209, 61, 196, 0.9)
+		),
+		url('images/applicatin.jpg'); /* Photo by Kumpan Electric on Unsplash */
+}
+
+.card4 {
+	background: linear-gradient(
+			to right,
+			rgba(22, 202, 80, 0.9),
+			rgba(22, 202, 80, 0.9)
+		),
+		url('images/web-design.jpg'); /* Photo by Campaign Creators on Unsplash*/
+}

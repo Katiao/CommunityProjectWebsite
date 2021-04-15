@@ -1,0 +1,34 @@
+/* hero section */
+
+.hero-container {
+	grid-column-start: 1;
+	grid-column-end: -1;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(43.6rem, 1fr));
+	justify-items: center;
+	align-items: center;
+	background-color: #2b2c2c;
+	padding-top: 10rem;
+	padding-bottom: 10rem;
+}
+
+.hero-text h1 {
+	font-weight: 700;
+	margin-bottom: 0.5rem;
+}
+
+.hero-text h3 {
+	font-size: 2.3rem;
+	font-weight: 40rem;
+	margin-top: 1rem;
+	margin-bottom: 5rem;
+}
+
+.hero-picture {
+	padding-left: 14rem;
+}
+
+.hero-picture img {
+	width: 70%;
+	clip-path: circle(50%);
+}

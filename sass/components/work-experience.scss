@@ -1,0 +1,100 @@
+/* work experiences section */
+
+.work-experiences-container {
+	grid-column-start: 1;
+	grid-column-end: -1;
+	background-color: #3c3c3d;
+	padding-top: 5rem;
+	padding-bottom: 5rem;
+	display: grid;
+	gap: 1.5rem;
+	grid-template-columns: 1fr;
+	justify-items: center;
+	align-items: center;
+}
+.work-experiences-container h2 {
+	text-align: center;
+	font-weight: 40rem;
+	position: relative;
+}
+
+.work-experiences-container h2::before {
+	content: '';
+	position: absolute;
+	width: 22%;
+	height: 0.4rem;
+	bottom: -1rem;
+	left: 25rem;
+	right: 0;
+	background-color: #fdb533;
+}
+
+.work-experiences-container p {
+	line-height: 2.5rem;
+	margin-top: 5rem;
+	text-align: center;
+	margin-bottom: 5rem;
+}
+
+.work-experiences-container h3 {
+	margin: 0;
+	color: white;
+	font-size: 2.2rem;
+	font-weight: 50rem;
+}
+
+.company {
+	margin-top: 0.5rem;
+	font-size: 1.5rem;
+	color: gray;
+}
+
+.date {
+	margin-bottom: 0.5rem;
+	font-size: 1.5rem;
+	color: gray;
+}
+
+.works-cards-container {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	padding-right: 10rem;
+	padding-left: 10rem;
+}
+
+@media (max-width: 764px) {
+	.works-cards-container {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(3, 30rem);
+	}
+}
+
+.works-card {
+	border: solid;
+	border-width: 0.1rem;
+	border-color: gray;
+	padding: 8rem 3rem;
+}
+
+.works-card:hover {
+	background: #fdb533;
+	cursor: pointer;
+	transition: 0.6s;
+}
+
+.works-card:hover h3 {
+	color: #2b2c2c;
+}
+
+.works-card:hover p {
+	color: #2b2c2c;
+}
+
+.works-card:hover .date {
+	color: #2b2c2c;
+}
+
+.works-card:hover .company {
+	color: #2b2c2c;
+}

@@ -1,0 +1,35 @@
+/* about me section */
+.about-me {
+	grid-column-start: 1;
+	grid-column-end: -1;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(43.6rem, 1fr));
+	justify-items: center;
+	align-items: center;
+	background-color: #3c3c3d;
+	padding-top: 10rem;
+	padding-bottom: 10rem;
+}
+
+.about-me-content {
+	padding-right: 15rem;
+}
+
+.about-me-content p {
+	margin-bottom: 4rem;
+}
+
+.about-me h2 {
+	font-weight: 40rem;
+	position: relative;
+}
+.about-me h2::before {
+	content: '';
+	position: absolute;
+	width: 50%;
+	margin-top: 1.2rem;
+	height: 0.4rem;
+	bottom: -1rem;
+	right: 25%;
+	background-color: #fdb533;
+}
