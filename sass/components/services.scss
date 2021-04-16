@@ -1,76 +1,63 @@
-/* 	Services Section */
-
-.services-container {
-	grid-column-start: 1;
-	grid-column-end: -1;
-	display: grid;
-	grid-template-columns: 1fr;
-	justify-items: center;
-	align-items: center;
+.services {
+	grid-column: full-start / full-end;
+	padding: 5rem 0 10rem 0;
 	background-color: #2b2c2c;
-	padding-top: 5rem;
-	padding-bottom: 10rem;
-}
 
-.services-text h2 {
-	text-align: center;
-	font-weight: 40rem;
-	position: relative;
-}
+	&-text-box {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 
-.services-text h2::before {
-	content: '';
-	position: absolute;
-	width: 12%;
-	margin-top: 1.2rem;
-	height: 0.4rem;
-	bottom: -1rem;
-	left: 44%;
-	background-color: #fdb533;
-}
+		& h2 {
+			font-weight: 40rem;
+			position: relative;
+			margin-bottom: 5rem;
 
-.services-text p {
-	margin-top: 5rem;
-}
+			&::before {
+				content: '';
+				position: absolute;
+				width: 50%;
+				margin-top: 1.2rem;
+				height: 0.4rem;
+				bottom: -1rem;
+				left: 25%;
+				background-color: #fdb533;
+			}
+		}
 
-.cards {
-	display: grid;
-	/* max-width: 120rem; */
-	column-gap: 2rem;
-	row-gap: 2rem;
-	margin-top: 6rem;
-}
+		& p {
+			text-align: center;
+			line-height: 2.5rem;
+		}
+	}
 
-/* is the screen larger than 600 pixels? then make it two columns */
-
-@media (min-width: 600px) {
-	.cards {
-		grid-template-columns: repeat(2, 1fr);
+	&-cards {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
+		justify-items: center;
+		align-items: center;
+		column-gap: 4rem;
+		row-gap: 4rem;
+		margin-top: 6rem;
 	}
 }
 
 .card {
 	border-radius: 1rem;
-}
+	display: flex;
+	flex-direction: column;
+	padding: 8rem;
 
-.card h3 {
-	padding: 2rem 6rem 0.5rem 10rem;
-	margin-bottom: 1rem;
-	margin-top: 0;
-	color: white;
-	font-size: 3.2rem;
-}
+	& h3 {
+		margin: 1.5rem 0;
+		color: white;
+		font-size: 3.2rem;
+	}
 
-.card p {
-	padding: 0 10rem 8rem 10rem;
-	margin: 0;
-	line-height: 3rem;
-	color: white;
-}
-
-.cards i {
-	padding: 6rem 10rem 0.5rem 10rem;
-	margin-bottom: 0;
+	& p {
+		line-height: 3rem;
+		color: white;
+	}
 }
 
 .card1 {
@@ -79,7 +66,9 @@
 			rgba(39, 150, 236, 0.9),
 			rgba(39, 150, 236, 0.9)
 		),
-		url('images/laptop.jpg'); /* Photo by XPS on Unsplash */
+		url('../images/laptop.jpg');
+
+	justify-self: end;
 }
 
 .card2 {
@@ -88,7 +77,8 @@
 			rgba(250, 180, 32, 0.9),
 			rgba(250, 180, 32, 0.9)
 		),
-		url('images/desk.jpg'); /* Photo by JESHOOTS.COM on Unsplash */
+		url('../images/desk.jpg');
+	justify-self: start;
 }
 .card3 {
 	background: linear-gradient(
@@ -96,7 +86,8 @@
 			rgba(209, 61, 196, 0.9),
 			rgba(209, 61, 196, 0.9)
 		),
-		url('images/applicatin.jpg'); /* Photo by Kumpan Electric on Unsplash */
+		url('../images/applicatin.jpg');
+	justify-self: end;
 }
 
 .card4 {
@@ -105,5 +96,17 @@
 			rgba(22, 202, 80, 0.9),
 			rgba(22, 202, 80, 0.9)
 		),
-		url('images/web-design.jpg'); /* Photo by Campaign Creators on Unsplash*/
+		url('../images/web-design.jpg');
+	justify-self: start;
+}
+
+/* to align the cards in the center when screen smaller than 939px */
+
+@media (max-width: 939px) {
+	.card1,
+	.card2,
+	.card3,
+	.card4 {
+		justify-self: center;
+	}
 }
