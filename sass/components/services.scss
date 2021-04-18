@@ -3,6 +3,11 @@
 	padding: 10rem 0 10rem 0;
 	background-color: #2b2c2c;
 
+	@media (max-width: $bp-small) {
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+
 	&-text-box {
 		display: flex;
 		flex-direction: column;
@@ -100,9 +105,9 @@
 	justify-self: start;
 }
 
-/* to align the cards in the center when screen smaller than 939px */
+/* to align the cards in the center when screen smaller than 800px */
 
-@media (max-width: 939px) {
+@media (max-width: $bp-medium) {
 	.card1,
 	.card2,
 	.card3,

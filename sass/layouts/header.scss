@@ -17,12 +17,17 @@
 	&-text h3 {
 		font-size: 2.3rem;
 		font-weight: 40rem;
-		margin-top: 1rem;
-		margin-bottom: 5rem;
+		margin: 1rem 0 5rem 0;
 	}
 
-	&-picture img {
+	& img {
 		width: 70%;
 		clip-path: circle(45%);
+		justify-self: start;
+
+		@media (max-width: $bp-small) {
+			justify-self: center;
+			margin-top: 4rem;
+		}
 	}
 }
