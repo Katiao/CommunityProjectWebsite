@@ -32,6 +32,9 @@ body {
 1 rem = 10px; 10px/16px (default browser) = 62.5% */
 html {
   font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 50%; } }
 
 /* grid layout for the whole page 
 12 grid layout with 2 extra columns for centering content
@@ -75,7 +78,7 @@ html {
   font-size: 2rem;
   line-height: 6rem;
   padding: 0 4rem;
-  margin-left: 2rem;
+  /* margin-left: 2rem; */
   color: #fdb533;
   border: 0.1rem solid #fdb533;
   border-radius: 0.5rem;
@@ -94,27 +97,38 @@ html {
   grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
   justify-items: center;
   align-items: center; }
-  .about-me-content {
-    padding-right: 15rem; }
-  .about-me-content p {
-    margin-bottom: 4rem; }
   .about-me h2 {
     font-weight: 40rem;
     position: relative; }
-  .about-me h2::before {
-    content: '';
-    position: absolute;
-    width: 50%;
-    margin-top: 1.2rem;
-    height: 0.4rem;
-    bottom: -1rem;
-    right: 25%;
-    background-color: #fdb533; }
+    .about-me h2::before {
+      content: '';
+      position: absolute;
+      width: 50%;
+      margin-top: 1.2rem;
+      height: 0.4rem;
+      bottom: -1rem;
+      right: 25%;
+      background-color: #fdb533; }
+  .about-me-content {
+    padding-right: 15rem; }
+    @media (max-width: 41rem) {
+      .about-me-content {
+        padding-right: 0;
+        margin: 4rem 2rem 0 2rem; } }
+    .about-me-content p {
+      margin-bottom: 4rem;
+      line-height: 2.5rem; }
+    .about-me-content button {
+      margin: 1rem; }
 
 .services {
   grid-column: full-start / full-end;
   padding: 10rem 0 10rem 0;
   background-color: #2b2c2c; }
+  @media (max-width: 41rem) {
+    .services {
+      padding-left: 2rem;
+      padding-right: 2rem; } }
   .services-text-box {
     display: flex;
     flex-direction: column;
@@ -173,8 +187,8 @@ html {
   background: linear-gradient(to right, rgba(22, 202, 80, 0.9), rgba(22, 202, 80, 0.9)), url("../images/web-design.jpg");
   justify-self: start; }
 
-/* to align the cards in the center when screen smaller than 939px */
-@media (max-width: 939px) {
+/* to align the cards in the center when screen smaller than 800px */
+@media (max-width: 50rem) {
   .card1,
   .card2,
   .card3,
@@ -185,6 +199,10 @@ html {
   grid-column: full-start / full-end;
   padding: 10rem 0 10rem 0;
   /* cards grid */ }
+  @media (max-width: 41rem) {
+    .latest-works {
+      padding-left: 2rem;
+      padding-right: 2rem; } }
   .latest-works-text-box {
     display: flex;
     flex-direction: column;
@@ -222,59 +240,35 @@ html {
     margin: 0 10rem 0 10rem;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 20vw);
-    gap: 1.5rem;
-    /* 	justify-content: center;
-		align-content: center;
-		gap: 1.5rem;
-		grid-template-columns: repeat(4, 20rem);
-		grid-template-rows: repeat(3, 20rem);
-		grid-template-areas:
-			'one one two three'
-			'one one four five'
-			'six seven eight eight'; */
-    /* @media (max-width: 870px) {
-			repeat: (auto-fit, minmax(50rem, 1fr));
-			justify-content: center;
-			align-content: center;
-			/* grid-template-columns: repeat(2, 35rem); */
-    /* grid-template-rows: repeat(4, 35rem); */
-    /*grid-template-areas:
-				'one two '
-				'three four'
-				'five six'
-				'seven eight';
-		} */ }
+    gap: 1.5rem; }
+    @media (max-width: 50rem) {
+      .latest-works-cards {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 40vw); } }
+    @media (max-width: 41rem) {
+      .latest-works-cards {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(8, 60vw);
+        row-gap: 3rem; } }
 
-/* @media (max-width: 909px) and (min-width: 500px) {
-	.latest-works-cards {
-		
-	}
-}
-
-@media (max-width: 499px) {
-	.latest-works-cards {
-		display: grid;
-		grid-template-columns: 1fr;
-		grid-template-rows: repeat(8, 40rem);
-		grid-template-areas:
-			'one'
-			'two'
-			'three'
-			'four'
-			'five'
-			'six'
-			'seven'
-			'eight';
-	}
-}
- */
 .cardOne {
   grid-row: 1 / span 2;
   grid-column: 1 / span 2; }
+  @media (max-width: 50rem) {
+    .cardOne {
+      grid-row: 1 / 2;
+      grid-column: 1 / 2; } }
 
 .cardEight {
   grid-row: 3 / 4;
   grid-column: 3 / span 2; }
+  @media (max-width: 50rem) {
+    .cardEight {
+      grid-column: 2 / 3; } }
+  @media (max-width: 41rem) {
+    .cardEight {
+      grid-row: 7 / 8;
+      grid-column: 1 / 2; } }
 
 /* cards overlay effect */
 .cardhover {
@@ -346,10 +340,9 @@ html {
   display: grid;
   grid-template-columns: repeat(3, 30rem); }
 
-@media (max-width: 930px) {
+@media (max-width: 50rem) {
   .works-cards-container {
-    grid-template-columns: 1fr;
-    /* grid-template-rows: repeat(3, 30rem); */ } }
+    grid-template-columns: 1fr; } }
 
 .works-card {
   border: solid;
@@ -424,7 +417,7 @@ html {
       font-weight: bold; }
     .contact-info ul {
       list-style-type: none;
-      font-size: 1.3rem; }
+      font-size: 1.4rem; }
     .contact-info .follow-me {
       font-size: 2rem;
       font-weight: bold; }
@@ -441,6 +434,8 @@ html {
     grid-template-rows: repeat(7, auto);
     column-gap: 3rem;
     row-gap: 1.5rem; }
+    .contact-form label {
+      font-size: 1.2rem; }
     .contact-form-input {
       color: #777777;
       background-color: #363737;
@@ -655,11 +650,15 @@ html {
   .hero-text h3 {
     font-size: 2.3rem;
     font-weight: 40rem;
-    margin-top: 1rem;
-    margin-bottom: 5rem; }
-  .hero-picture img {
+    margin: 1rem 0 5rem 0; }
+  .hero img {
     width: 70%;
-    clip-path: circle(45%); }
+    clip-path: circle(45%);
+    justify-self: start; }
+    @media (max-width: 41rem) {
+      .hero img {
+        justify-self: center;
+        margin-top: 4rem; } }
 
 .closing {
   grid-column: full-start / full-end;
@@ -693,4 +692,9 @@ footer {
   font-weight: bold; }
   footer p {
     margin-top: 1.5rem;
-    font-size: 1rem; }
+    font-size: 1.2rem; }
+    footer p a {
+      text-decoration: none;
+      color: inherit; }
+      footer p a:hover {
+        color: #fdb533; }

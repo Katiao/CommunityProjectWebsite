@@ -35,10 +35,9 @@
 	grid-template-columns: repeat(3, 30rem);
 }
 
-@media (max-width: 930px) {
+@media (max-width: $bp-medium) {
 	.works-cards-container {
 		grid-template-columns: 1fr;
-		/* grid-template-rows: repeat(3, 30rem); */
 	}
 }
 

@@ -27,7 +27,7 @@
 
 		& ul {
 			list-style-type: none;
-			font-size: 1.3rem;
+			font-size: 1.4rem;
 		}
 
 		& .follow-me {
@@ -55,6 +55,10 @@
 		row-gap: 1.5rem;
 
 		//arranging & styling the form grid
+
+		& label {
+			font-size: 1.2rem;
+		}
 
 		&-input {
 			color: #777777;

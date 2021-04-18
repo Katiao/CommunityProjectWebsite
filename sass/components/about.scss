@@ -7,27 +7,36 @@
 	justify-items: center;
 	align-items: center;
 
-	&-content {
-		padding-right: 15rem;
-	}
-
-	&-content p {
-		margin-bottom: 4rem;
-	}
-
 	& h2 {
 		font-weight: 40rem;
 		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			width: 50%;
+			margin-top: 1.2rem;
+			height: 0.4rem;
+			bottom: -1rem;
+			right: 25%;
+			background-color: #fdb533;
+		}
 	}
 
-	& h2::before {
-		content: '';
-		position: absolute;
-		width: 50%;
-		margin-top: 1.2rem;
-		height: 0.4rem;
-		bottom: -1rem;
-		right: 25%;
-		background-color: #fdb533;
+	&-content {
+		padding-right: 15rem;
+		@media (max-width: $bp-small) {
+			padding-right: 0;
+			margin: 4rem 2rem 0 2rem;
+		}
+
+		& p {
+			margin-bottom: 4rem;
+			line-height: 2.5rem;
+		}
+
+		& button {
+			margin: 1rem;
+		}
 	}
 }
