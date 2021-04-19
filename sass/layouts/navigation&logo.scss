@@ -1,6 +1,5 @@
 /* grid layout for top menu and logo */
 .navbar {
-	width: 100%;
 	grid-column: full-start / full-end;
 	grid-row: 1 / 2;
 	background-color: #2b2c2c;
@@ -10,6 +9,7 @@
 	justify-content: space-between;
 	position: fixed;
 	z-index: 100;
+	width: 100%;
 
 	& ul {
 		list-style-type: none;

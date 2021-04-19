@@ -1,10 +1,9 @@
 .latest-works {
 	grid-column: full-start / full-end;
-	padding: 10rem 0 10rem 0;
+	padding: 10rem 0;
 
 	@media (max-width: $bp-small) {
-		padding-left: 2rem;
-		padding-right: 2rem;
+		padding: 5rem 2rem 5rem 2rem;
 	}
 
 	&-text-box {
@@ -17,14 +16,18 @@
 			position: relative;
 			margin-bottom: 5rem;
 
+			@media (max-width: $bp-small) {
+				font-size: 4.5rem;
+			}
+
 			&::before {
 				content: '';
 				position: absolute;
-				width: 50%;
+				width: 40%;
 				margin-top: 1.2rem;
 				height: 0.4rem;
 				bottom: -1rem;
-				left: 25%;
+				left: 30%;
 				background-color: #fdb533;
 			}
 		}

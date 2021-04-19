@@ -1,13 +1,28 @@
 .hero {
 	grid-column: full-start / full-end;
 	background-color: #2b2c2c;
-	padding: 20rem 0 10rem 0;
+	padding: 20rem 0;
 	display: grid;
 	/* Making grid responsive without media queries:
 	auto-fit creates as many tracks as can fit based on the width that we define. Based on width, css will add as many tracks as can fit in the container.*/
 	grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
 	justify-items: center;
 	align-items: center;
+	@media (max-width: $bp-small) {
+		padding-bottom: 5rem;
+	}
+
+	&-text {
+		display: flex;
+		flex-direction: column;
+
+		& button {
+			align-self: flex-start;
+			@media (max-width: $bp-small) {
+				align-self: center;
+			}
+		}
+	}
 
 	&-text h1 {
 		font-weight: 700;

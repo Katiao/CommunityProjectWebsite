@@ -1,11 +1,10 @@
 .services {
 	grid-column: full-start / full-end;
-	padding: 10rem 0 10rem 0;
+	padding: 10rem 0;
 	background-color: #2b2c2c;
 
 	@media (max-width: $bp-small) {
-		padding-left: 2rem;
-		padding-right: 2rem;
+		padding: 5rem 2rem 5rem 2rem;
 	}
 
 	&-text-box {
@@ -17,6 +16,10 @@
 			font-weight: 40rem;
 			position: relative;
 			margin-bottom: 5rem;
+
+			@media (max-width: $bp-small) {
+				font-size: 4.5rem;
+			}
 
 			&::before {
 				content: '';
@@ -44,6 +47,11 @@
 		column-gap: 4rem;
 		row-gap: 4rem;
 		margin-top: 6rem;
+
+		@media (max-width: $bp-medium) {
+			grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+			margin: 4rem 2rem;
+		}
 	}
 }
 

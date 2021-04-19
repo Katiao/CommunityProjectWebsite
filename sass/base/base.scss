@@ -33,7 +33,7 @@ html {
 1140 / 12 to get 95 px for one column*/
 .page-container {
 	display: grid;
-	justify-content: center;
+	/* justify-content: center; */
 	grid-template-columns:
 		[full-start] 1fr [center-start] repeat(
 			12,
