@@ -11,7 +11,7 @@ close.addEventListener('click', () => modal.classList.remove('show-modal'));
 
 /* scrolling animation */
 
-const boxes = document.querySelectorAll('.box');
+/* const boxes = document.querySelectorAll('.box');
 
 window.addEventListener('scroll', checkBoxes);
 
@@ -30,3 +30,4 @@ function checkBoxes() {
 		}
 	});
 }
+ */
