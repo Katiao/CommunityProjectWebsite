@@ -41,17 +41,12 @@
 
 	&-cards {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
 		justify-items: center;
 		align-items: center;
 		column-gap: 4rem;
 		row-gap: 4rem;
 		margin-top: 6rem;
-
-		@media (max-width: $bp-medium) {
-			grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
-			margin: 4rem 2rem;
-		}
 	}
 }
 
@@ -113,9 +108,9 @@
 	justify-self: start;
 }
 
-/* to align the cards in the center when screen smaller than 800px */
+/* to align the cards in the center when screen smaller than 849px */
 
-@media (max-width: $bp-medium) {
+@media (max-width: 53em) {
 	.card1,
 	.card2,
 	.card3,

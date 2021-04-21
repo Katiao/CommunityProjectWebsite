@@ -97,13 +97,13 @@ html {
   grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
   justify-items: center;
   align-items: center; }
-  @media (max-width: 41rem) {
+  @media (max-width: 41em) {
     .about-me {
       padding: 4rem 2rem; } }
   .about-me h2 {
     font-weight: 40rem;
     position: relative; }
-    @media (max-width: 41rem) {
+    @media (max-width: 41em) {
       .about-me h2 {
         font-size: 4.5rem; } }
     .about-me h2::before {
@@ -117,7 +117,7 @@ html {
       background-color: #fdb533; }
   .about-me-content {
     padding-right: 15rem; }
-    @media (max-width: 41rem) {
+    @media (max-width: 41em) {
       .about-me-content {
         padding: 4rem 2rem; } }
     .about-me-content p {
@@ -125,7 +125,7 @@ html {
       line-height: 2.5rem; }
     .about-me-content button {
       margin: 1rem; }
-  @media (max-width: 41rem) {
+  @media (max-width: 41em) {
     .about-me-buttons {
       display: flex;
       flex-direction: column;
@@ -135,7 +135,7 @@ html {
   grid-column: full-start / full-end;
   padding: 10rem 0;
   background-color: #2b2c2c; }
-  @media (max-width: 41rem) {
+  @media (max-width: 41em) {
     .services {
       padding: 5rem 2rem 5rem 2rem; } }
   .services-text-box {
@@ -146,7 +146,7 @@ html {
       font-weight: 40rem;
       position: relative;
       margin-bottom: 5rem; }
-      @media (max-width: 41rem) {
+      @media (max-width: 41em) {
         .services-text-box h2 {
           font-size: 4.5rem; } }
       .services-text-box h2::before {
@@ -163,16 +163,12 @@ html {
       line-height: 2.5rem; }
   .services-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
     justify-items: center;
     align-items: center;
     column-gap: 4rem;
     row-gap: 4rem;
     margin-top: 6rem; }
-    @media (max-width: 50rem) {
-      .services-cards {
-        grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
-        margin: 4rem 2rem; } }
 
 .card {
   border-radius: 1rem;
@@ -203,8 +199,8 @@ html {
   background: linear-gradient(to right, rgba(22, 202, 80, 0.9), rgba(22, 202, 80, 0.9)), url("../images/web-design.jpg");
   justify-self: start; }
 
-/* to align the cards in the center when screen smaller than 800px */
-@media (max-width: 50rem) {
+/* to align the cards in the center when screen smaller than 849px */
+@media (max-width: 53em) {
   .card1,
   .card2,
   .card3,
@@ -215,7 +211,7 @@ html {
   grid-column: full-start / full-end;
   padding: 10rem 0;
   /* cards grid */ }
-  @media (max-width: 41rem) {
+  @media (max-width: 41em) {
     .latest-works {
       padding: 5rem 2rem 5rem 2rem; } }
   .latest-works-text-box {
@@ -226,7 +222,7 @@ html {
       font-weight: 40rem;
       position: relative;
       margin-bottom: 5rem; }
-      @media (max-width: 41rem) {
+      @media (max-width: 41em) {
         .latest-works-text-box h2 {
           font-size: 4.5rem; } }
       .latest-works-text-box h2::before {
@@ -259,11 +255,11 @@ html {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 20vw);
     gap: 1.5rem; }
-    @media (max-width: 50rem) {
+    @media (max-width: 50em) {
       .latest-works-cards {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(4, 40vw); } }
-    @media (max-width: 41rem) {
+    @media (max-width: 41em) {
       .latest-works-cards {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(8, 60vw);
@@ -272,7 +268,7 @@ html {
 .cardOne {
   grid-row: 1 / span 2;
   grid-column: 1 / span 2; }
-  @media (max-width: 50rem) {
+  @media (max-width: 50em) {
     .cardOne {
       grid-row: 1 / 2;
       grid-column: 1 / 2; } }
@@ -280,10 +276,10 @@ html {
 .cardEight {
   grid-row: 3 / 4;
   grid-column: 3 / span 2; }
-  @media (max-width: 50rem) {
+  @media (max-width: 50em) {
     .cardEight {
       grid-column: 2 / 3; } }
-  @media (max-width: 41rem) {
+  @media (max-width: 41em) {
     .cardEight {
       grid-row: 7 / 8;
       grid-column: 1 / 2; } }
@@ -336,7 +332,7 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center; }
-  @media (max-width: 41rem) {
+  @media (max-width: 41em) {
     .work-experiences {
       padding-left: 2rem;
       padding-right: 2rem; } }
@@ -344,7 +340,7 @@ html {
     font-weight: 40rem;
     position: relative;
     margin-bottom: 5rem; }
-    @media (max-width: 41rem) {
+    @media (max-width: 41em) {
       .work-experiences h2 {
         font-size: 4.5rem; } }
     .work-experiences h2::before {
@@ -365,7 +361,7 @@ html {
   display: grid;
   grid-template-columns: repeat(3, 30rem); }
 
-@media (max-width: 50rem) {
+@media (max-width: 50em) {
   .works-cards-container {
     grid-template-columns: 1fr; } }
 
@@ -405,14 +401,14 @@ html {
   flex-direction: column;
   align-items: center;
   text-align: center; }
-  @media (max-width: 41rem) {
+  @media (max-width: 41em) {
     .hire-me {
       padding: 5rem 2rem 5rem 2rem; } }
   .hire-me h2 {
     font-weight: 40rem;
     position: relative;
     margin-bottom: 5rem; }
-    @media (max-width: 41rem) {
+    @media (max-width: 41em) {
       .hire-me h2 {
         font-size: 4.5rem; } }
     .hire-me h2::before {
@@ -439,7 +435,7 @@ html {
     padding-left: 5rem;
     font-weight: 40rem;
     margin-bottom: 10rem; }
-    @media (max-width: 41rem) {
+    @media (max-width: 41em) {
       .contact-title {
         justify-self: center;
         align-self: center;
@@ -447,7 +443,7 @@ html {
         padding: 5rem 24rem 5rem 0; } }
   .contact h2 {
     position: absolute; }
-    @media (max-width: 41rem) {
+    @media (max-width: 41em) {
       .contact h2 {
         font-size: 4.5rem;
         text-align: center;
@@ -464,7 +460,7 @@ html {
   .contact-info {
     grid-area: two;
     justify-self: center; }
-    @media (max-width: 41rem) {
+    @media (max-width: 41em) {
       .contact-info {
         justify-self: start;
         margin-bottom: 2rem; } }
@@ -513,7 +509,7 @@ html {
       grid-column: 1 / 2;
       grid-row: 3 / 4;
       margin-top: 1.5rem; }
-      @media (max-width: 41rem) {
+      @media (max-width: 41em) {
         .contact-form-phone-label {
           grid-column: 1 / span 2;
           grid-row: 3 / 4; } }
@@ -521,7 +517,7 @@ html {
       grid-column: 1 / 2;
       grid-row: 4 / 5;
       height: 6rem; }
-      @media (max-width: 41rem) {
+      @media (max-width: 41em) {
         .contact-form-phone-input {
           grid-column: 1 / span 2;
           grid-row: 4 / 5; } }
@@ -529,7 +525,7 @@ html {
       grid-column: 2 / 3;
       /* grid-row: 3 / 4; */
       margin-top: 1.5rem; }
-      @media (max-width: 41rem) {
+      @media (max-width: 41em) {
         .contact-form-email-label {
           grid-column: 1 / span 2;
           grid-row: 5 / 6; } }
@@ -537,7 +533,7 @@ html {
       grid-column: 2 / 3;
       /* grid-row: 4 / 5; */
       height: 6rem; }
-      @media (max-width: 41rem) {
+      @media (max-width: 41em) {
         .contact-form-email-input {
           grid-column: 1 / span 2;
           grid-row: 6 / 7; } }
@@ -554,7 +550,7 @@ html {
       margin-top: 1.5rem;
       width: 20rem;
       font-size: 1.5rem; }
-  @media (max-width: 41rem) {
+  @media (max-width: 41em) {
     .contact {
       padding: 5rem 2rem 5rem 2rem;
       grid-template-columns: auto;
@@ -575,12 +571,6 @@ html {
   /* color of links when hovering over menu item: */
   /* adding the line effect when you hover over item */
   /* for the active link to stay underlined  */ }
-  @media (max-width: 50rem) {
-    .navbar {
-      grid-column: full-start / center-start;
-      grid-row: 1/2;
-      display: flex;
-      flex-direction: column; } }
   .navbar ul {
     list-style-type: none;
     padding: 0 8rem;
@@ -628,7 +618,7 @@ html {
     background-color: #fdb533;
     transition: all 0.3s ease-in-out; }
 
-@media (min-width: 50rem) {
+@media (min-width: 50em) {
   .open {
     display: none; } }
 
@@ -692,7 +682,7 @@ html {
   grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
   justify-items: center;
   align-items: center; }
-  @media (max-width: 41rem) {
+  @media (max-width: 41em) {
     .hero {
       padding-bottom: 5rem; } }
   .hero-text {
@@ -700,7 +690,7 @@ html {
     flex-direction: column; }
     .hero-text button {
       align-self: flex-start; }
-      @media (max-width: 41rem) {
+      @media (max-width: 41em) {
         .hero-text button {
           align-self: center; } }
   .hero-text h1 {
@@ -714,7 +704,7 @@ html {
     width: 70%;
     clip-path: circle(45%);
     justify-self: start; }
-    @media (max-width: 41rem) {
+    @media (max-width: 41em) {
       .hero img {
         justify-self: center;
         margin-top: 4rem; } }
@@ -725,7 +715,7 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center; }
-  @media (max-width: 41rem) {
+  @media (max-width: 41em) {
     .closing {
       padding: 5rem 2rem 5rem 2rem; } }
   .closing-logo {
