@@ -78,7 +78,7 @@
 			}
 		}
 	}
-
+	//contact form styling starts here
 	&-form {
 		grid-area: three;
 		padding-right: 10rem;
@@ -87,8 +87,6 @@
 		grid-template-rows: repeat(7, auto);
 		column-gap: 3rem;
 		row-gap: 1.5rem;
-
-		//arranging & styling the form grid
 
 		& label {
 			font-size: 1.2rem;
@@ -126,11 +124,13 @@
 				grid-row: 3 / 4;
 			}
 		}
-
 		&-phone-input {
+			height: 6rem;
+			width: 100%;
+		}
+		&-number-control {
 			grid-column: 1 / 2;
 			grid-row: 4 / 5;
-			height: 6rem;
 
 			@media (max-width: $bp-small) {
 				grid-column: 1 / span 2;
@@ -177,6 +177,36 @@
 			margin-top: 1.5rem;
 			width: 20rem;
 			font-size: 1.5rem;
+		}
+	}
+
+	// styling form error message for phone number validatino
+
+	.contact-form-number-control {
+		position: relative;
+		& small {
+			color: #cc0000;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			visibility: hidden;
+		}
+
+		&.error small {
+			visibility: visible;
+			color: #cc0000;
+			position: absolute;
+			font-size: 1.5rem;
+			bottom: 0;
+			left: 0;
+		}
+
+		&.success input {
+			border: 2px solid #2ecc71;
+		}
+
+		&.error input {
+			border: 2px solid #cc0000;
 		}
 	}
 

@@ -515,11 +515,13 @@ html {
           grid-column: 1 / span 2;
           grid-row: 3 / 4; } }
     .contact-form-phone-input {
+      height: 6rem;
+      width: 100%; }
+    .contact-form-number-control {
       grid-column: 1 / 2;
-      grid-row: 4 / 5;
-      height: 6rem; }
+      grid-row: 4 / 5; }
       @media (max-width: 41em) {
-        .contact-form-phone-input {
+        .contact-form-number-control {
           grid-column: 1 / span 2;
           grid-row: 4 / 5; } }
     .contact-form-email-label {
@@ -551,6 +553,25 @@ html {
       margin-top: 1.5rem;
       width: 20rem;
       font-size: 1.5rem; }
+  .contact .contact-form-number-control {
+    position: relative; }
+    .contact .contact-form-number-control small {
+      color: #cc0000;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      visibility: hidden; }
+    .contact .contact-form-number-control.error small {
+      visibility: visible;
+      color: #cc0000;
+      position: absolute;
+      font-size: 1.5rem;
+      bottom: 0;
+      left: 0; }
+    .contact .contact-form-number-control.success input {
+      border: 2px solid #2ecc71; }
+    .contact .contact-form-number-control.error input {
+      border: 2px solid #cc0000; }
   @media (max-width: 41em) {
     .contact {
       padding: 5rem 2rem 5rem 2rem;

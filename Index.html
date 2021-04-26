@@ -302,20 +302,24 @@
 						</li>
 					</ul>
 				</div>
-				<form class="contact-form" action="">
+				<form class="contact-form" id="form" action="">
 					<label class="contact-form-name-label" for="name">NAME</label>
   					<input class="contact-form-name-input contact-form-input" type="text" id="name" name="name" placeholder="Type your name" required>			 
-													
-					<label class="contact-form-phone-label" for="number">PHONE NUMBER</label>
- 					<input class="contact-form-phone-input contact-form-input" type="text" id="number" name="number" placeholder="Type your phone number">
-					    
+					
+					
+						<label class="contact-form-phone-label" for="number">PHONE NUMBER</label>
+						<div class="contact-form-number-control">
+							<input class="contact-form-phone-input contact-form-input" type="text" id="number" name="number" placeholder="Please include international dialing code">
+							<small>Error message</small>
+						</div>
 						
 					<label class="contact-form-email-label" for="email">EMAIL</label>
   					 <input class="contact-form-email-input contact-form-input" type="email" id="email" name="email" placeholder="Type your email address" required>
 						
 										 
  					<label class="contact-form-message-label" for="message">YOUR MESSAGE</label>
- 					<textarea class="contact-form-message-input contact-form-input" id="message" name="message" placeholder="Your Message" cols="40" rows="8" required></textarea> 
+ 					<textarea class="contact-form-message-input contact-form-input" minlength="10" id="message" name="message" placeholder="Your Message" cols="40" rows="8" required></textarea> 
+					 
 					
 					 <input class="contact-form-button yellow-button" type="submit" value="SEND MESSAGE">
 				</form>				
