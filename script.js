@@ -42,5 +42,7 @@ function validateNumber() {
 //Event listener
 form.addEventListener('submit', function (e) {
 	e.preventDefault();
-	validateNumber();
+	if (phone.value) {
+		validateNumber();
+	}
 });

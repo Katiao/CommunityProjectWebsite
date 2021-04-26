@@ -499,6 +499,10 @@ html {
       font-size: 1.5rem;
       padding: 1.5rem 2rem;
       font-family: inherit; }
+      .contact-form-input:focus {
+        border-bottom: 3px solid #2ecc71; }
+      .contact-form-input:focus:invalid {
+        border-bottom: 3px solid #fd9533; }
     .contact-form-name-label {
       grid-column: 1 / span 2;
       grid-row: 1 / 2; }
@@ -569,9 +573,9 @@ html {
       bottom: 0;
       left: 0; }
     .contact .contact-form-number-control.success input {
-      border: 2px solid #2ecc71; }
+      border-bottom: 2px solid #2ecc71; }
     .contact .contact-form-number-control.error input {
-      border: 2px solid #cc0000; }
+      border-bottom: 2px solid #fd9533; }
   @media (max-width: 41em) {
     .contact {
       padding: 5rem 2rem 5rem 2rem;
