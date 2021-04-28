@@ -134,11 +134,8 @@
 		&-phone-input {
 			height: 6rem;
 			width: 100%;
-		}
-		&-number-control {
 			grid-column: 1 / 2;
 			grid-row: 4 / 5;
-
 			@media screen and (max-width: $bp-small) {
 				grid-column: 1 / span 2;
 				grid-row: 4 / 5;
@@ -196,7 +193,7 @@
 			position: absolute;
 			bottom: 0;
 			left: 0;
-			visibility: hidden;
+			/* visibility: hidden; */
 		}
 
 		&.error small {

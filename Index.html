@@ -16,7 +16,7 @@
 	</head>
 	<body>
 		<!-- grid container -->
-		<div class="page-container">
+		<div class="page-container" id="page-container">
 			<!--  Logo and menu -->
 			<nav class="navbar"> 
 				<div class="navbar-logo"><a href="index.html">K.</a></div>
@@ -307,11 +307,10 @@
   					<input class="contact-form-name-input contact-form-input" type="text" id="name" name="name" placeholder="Type your name" required>			 
 					
 					
-						<label class="contact-form-phone-label" for="number">PHONE NUMBER (Optional)</label>
-						<div class="contact-form-number-control">
-							<input class="contact-form-phone-input contact-form-input" type="text" id="number" name="number" placeholder="Incl. international dialing code">
-							<small>Error message</small>
-						</div>
+					<label class="contact-form-phone-label" for="number">PHONE NUMBER (Incl. International dialing code )</label>
+						
+					<input class="contact-form-phone-input contact-form-input" type="text" id="number" name="number" placeholder="e.g. +49 408XXXXXXX" pattern="^\+(?:[0-9] ?){6,14}[0-9]$">
+						
 						
 					<label class="contact-form-email-label" for="email">EMAIL</label>
   					 <input class="contact-form-email-input contact-form-input" type="email" id="email" name="email" placeholder="Type your email address" required>
