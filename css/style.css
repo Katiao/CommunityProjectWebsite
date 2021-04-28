@@ -164,10 +164,17 @@ html {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
     justify-items: center;
+    justify-content: center;
     align-items: center;
     column-gap: 4rem;
     row-gap: 4rem;
     margin-top: 6rem; }
+    @media screen and (max-width: 41em) {
+      .services-cards {
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr)); } }
+    @media screen and (min-width: 75em) {
+      .services-cards {
+        grid-template-columns: repeat(2, 50rem); } }
 
 .card {
   border-radius: 1rem;
