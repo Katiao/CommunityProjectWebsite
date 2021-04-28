@@ -83,7 +83,7 @@
 	}
 }
 
-@media (min-width: $bp-medium) {
+@media screen and (min-width: $bp-medium) {
 	& .open {
 		display: none;
 	}
@@ -91,7 +91,7 @@
 
 /*  menu item layout change with smaller screen */
 
-@media (max-width: 909px) {
+@media screen and (max-width: 909px) {
 	.navbar {
 		align-items: stretch;
 		& ul {

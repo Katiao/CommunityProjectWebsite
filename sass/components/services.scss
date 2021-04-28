@@ -3,7 +3,7 @@
 	padding: 10rem 0;
 	background-color: #2b2c2c;
 
-	@media (max-width: $bp-small) {
+	@media screen and (max-width: $bp-small) {
 		padding: 5rem 2rem 5rem 2rem;
 	}
 
@@ -17,7 +17,7 @@
 			position: relative;
 			margin-bottom: 5rem;
 
-			@media (max-width: $bp-small) {
+			@media screen and (max-width: $bp-small) {
 				font-size: 4.5rem;
 			}
 
@@ -110,7 +110,7 @@
 
 /* to align the cards in the center when screen smaller than 849px */
 
-@media (max-width: 53em) {
+@media screen and (max-width: 53em) {
 	.card1,
 	.card2,
 	.card3,

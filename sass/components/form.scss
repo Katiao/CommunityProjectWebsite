@@ -16,7 +16,7 @@
 		font-weight: 40rem;
 		margin-bottom: 10rem;
 
-		@media (max-width: $bp-small) {
+		@media screen and (max-width: $bp-small) {
 			justify-self: center;
 			align-self: center;
 			font-size: 4.5rem;
@@ -26,7 +26,7 @@
 
 	& h2 {
 		position: absolute;
-		@media (max-width: $bp-small) {
+		@media screen and (max-width: $bp-small) {
 			font-size: 4.5rem;
 			text-align: center;
 			justify-self: start;
@@ -48,7 +48,7 @@
 		grid-area: two;
 		justify-self: center;
 
-		@media (max-width: $bp-small) {
+		@media screen and (max-width: $bp-small) {
 			justify-self: start;
 			margin-bottom: 2rem;
 		}
@@ -126,7 +126,7 @@
 			grid-row: 3 / 4;
 			margin-top: 1.5rem;
 
-			@media (max-width: $bp-small) {
+			@media screen and (max-width: $bp-small) {
 				grid-column: 1 / span 2;
 				grid-row: 3 / 4;
 			}
@@ -139,7 +139,7 @@
 			grid-column: 1 / 2;
 			grid-row: 4 / 5;
 
-			@media (max-width: $bp-small) {
+			@media screen and (max-width: $bp-small) {
 				grid-column: 1 / span 2;
 				grid-row: 4 / 5;
 			}
@@ -150,7 +150,7 @@
 			/* grid-row: 3 / 4; */
 			margin-top: 1.5rem;
 
-			@media (max-width: $bp-small) {
+			@media screen and (max-width: $bp-small) {
 				grid-column: 1 / span 2;
 				grid-row: 5 / 6;
 			}
@@ -161,7 +161,7 @@
 			/* grid-row: 4 / 5; */
 			height: 6rem;
 
-			@media (max-width: $bp-small) {
+			@media screen and (max-width: $bp-small) {
 				grid-column: 1 / span 2;
 				grid-row: 6 / 7;
 			}
@@ -217,7 +217,7 @@
 		}
 	}
 
-	@media (max-width: $bp-small) {
+	@media screen and (max-width: $bp-small) {
 		padding: 5rem 2rem 5rem 2rem;
 
 		grid-template-columns: auto;
