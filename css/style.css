@@ -722,7 +722,7 @@ html {
     font-weight: 900;
     font-size: 5rem;
     line-height: 6rem;
-    margin-left: 10rem;
+    margin-left: 5rem;
     margin-top: 1.5rem; }
     .navbar-logo a {
       color: #fbd214; }
@@ -788,6 +788,13 @@ html {
         color: inherit; }
         .modal-container ul li a:hover {
           color: #fbd214; }
+  .modal-container-logo {
+    font-weight: 900;
+    font-size: 5rem;
+    line-height: 6rem;
+    margin: 1.5rem 0 1.5rem 1rem; }
+    .modal-container-logo a {
+      color: #fbd214; }
   .modal-container button {
     background-color: #2b2c2c;
     border: #2b2c2c;
