@@ -64,6 +64,10 @@
 	flex-direction: column;
 	padding: 8rem;
 
+	&:hover {
+		transform: translateY(-1.5rem) scale(1.03);
+	}
+
 	& h3 {
 		margin: 1.5rem 0;
 		color: white;

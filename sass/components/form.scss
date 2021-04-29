@@ -184,36 +184,6 @@
 		}
 	}
 
-	// styling form error message for phone number validation
-
-	.contact-form-number-control {
-		position: relative;
-		& small {
-			color: #cc0000;
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			/* visibility: hidden; */
-		}
-
-		&.error small {
-			visibility: visible;
-			color: #cc0000;
-			position: absolute;
-			font-size: 1.5rem;
-			bottom: 0;
-			left: 0;
-		}
-
-		&.success input {
-			border-bottom: 2px solid #2ecc71;
-		}
-
-		&.error input {
-			border-bottom: 2px solid #fd9533;
-		}
-	}
-
 	@media screen and (max-width: $bp-small) {
 		padding: 5rem 2rem 5rem 2rem;
 
