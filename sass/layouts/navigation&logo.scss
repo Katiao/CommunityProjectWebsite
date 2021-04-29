@@ -91,7 +91,7 @@
 
 /*  menu item layout change with smaller screen */
 
-@media screen and (max-width: 909px) {
+@media screen and (max-width: $bp-medium) {
 	.navbar {
 		align-items: stretch;
 		& ul {
