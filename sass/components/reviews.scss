@@ -6,7 +6,7 @@
 
 .reviews-slider {
 	width: 85vw;
-	max-width: 117rem;
+	max-width: 70rem;
 	margin: 0 auto;
 	margin-top: 5rem;
 	text-align: center;
@@ -93,8 +93,8 @@
 .btn {
 	position: absolute;
 	top: 17.5rem;
-	background: hsl(209, 28%, 39%);
-	color: whitesmoke;
+	background: rgb(184, 180, 180);
+	color: #3c3c3d;
 	padding: 0.25rem 0.35rem;
 	border-radius: 0.25rem;
 	border: transparent;
@@ -121,4 +121,37 @@
 	.quote-icon {
 		font-size: 4rem;
 	}
+}
+
+//MORE CSS FOR JS
+
+.slide-container {
+	display: flex;
+	position: relative;
+	//height necessary for position absolute to work
+	height: 45rem;
+	overflow: hidden;
+}
+
+.slide {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: all 0.5s ease-in-out;
+}
+
+.slide.active {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+.slide.next {
+	transform: translateX(100%);
+}
+
+.slide.last {
+	transform: translateX(-100%);
 }
