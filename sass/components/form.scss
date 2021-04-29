@@ -1,7 +1,7 @@
 .contact {
 	grid-column: full-start / full-end;
-	padding: 10rem 0;
 	background-color: #3c3c3d;
+	padding: 10rem 0;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: (10rem, 1fr);
