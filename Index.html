@@ -24,11 +24,11 @@
 					<i class="fas fa-bars fa-2x"></i>
 				</button>
 				<ul>
-					<li><a class="navbar-menu" href="#">Home</a></li>
-					<li><a class="navbar-menu" href="#">About Me</a></li>
-					<li><a class="navbar-menu" href="#">Services</a></li>
-					<li><a class="navbar-menu" href="#">Portfolio</a></li>
-					<li><a class="navbar-menu" href="#">Contact</a></li>
+					<li><a class="navbar-menu" href="/">Home</a></li>
+					<li><a class="navbar-menu" href="#aboutme">About Me</a></li>
+					<li><a class="navbar-menu" href="#services">Services</a></li>
+					<li><a class="navbar-menu" href="#portfolio">Portfolio</a></li>
+					<li><a class="navbar-menu" href="#contact">Contact</a></li>
 					<li><a class="navbar-menu" href="#">Blog</a></li>
 				</ul>
 			</nav>
@@ -67,7 +67,7 @@
 				
 			</header>
 			<!--    About me section -->
-			<section class="about-me">
+			<section class="about-me" id="aboutme">
 				<h2 class="">About Me</h2>
 				<div
 					class="about-me-content"
@@ -85,7 +85,7 @@
 					</p>
 
 					<div class="about-me-buttons">
-						<button class="yellow-button">View Work</button>
+						<button class="yellow-button" onclick="document.location='#portfolio'">View Work</button>
 						<button class="grey-button">Download CV</button>
 					</div>
 
@@ -93,7 +93,7 @@
 				</div>
 			</section>
 			<!--    Services section -->
-			<section class="services">
+			<section class="services" id="services">
 				<div class="services-text-box">
 					<h2>
 						Services
@@ -149,7 +149,7 @@
 				</div>
 			</section>
 			<!--    Latest Works section -->
-			<section class="latest-works">
+			<section class="latest-works" id="portfolio">
 				<div class="latest-works-text-box">
 					<h2>
 					Latest Works</h2>
@@ -300,7 +300,7 @@
 
 			<!--    Contact me section -->
 
-		    <section class="contact">
+		    <section class="contact" id="contact">
 				<div class="contact-title">
 					<h2>
 						Contact Me

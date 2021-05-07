@@ -63,7 +63,7 @@ const startSlider = type => {
 	if (type === 'prev') {
 		active.classList.add('next');
 		last.classList.add('active');
-		next = last.previousElementSibling;
+		let next = last.previousElementSibling;
 		//if we run out of previous elements, next becomes last slide
 		if (!next) {
 			next = container.lastElementChild;
