@@ -52,7 +52,7 @@
 			</div>
 
 			<!--    Introduction section -->
-			<header class="hero">
+			<header class="hero" id="hero">
 				<div
 					class="hero-text"
 				>
@@ -360,12 +360,14 @@
 					<li><a href=""><i class="fab fa-linkedin"></i></a>&nbsp;&nbsp;</li> 
 					<li><a href=""><i class="fab fa-pinterest-square"></i></a>&nbsp;&nbsp;</li> 
 				</ul>
+				
 			</section>
 			<!--   Footer Section -->
 			<footer>
 				<hr>
-				<p>Built by <a href="#">Katia</a> </p>				
+				<p>Built by <a href="#">Katia</a></p>			
 			</footer>
+			<button onclick="document.getElementById('hero').scrollIntoView({ behavior: 'smooth' })"><i class="fas fa-angle-up fa-3x back-to-top"></i></button>	
 			<script type="module" src="script.js"></script>
 	</body>
 </html>

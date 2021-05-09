@@ -1,4 +1,4 @@
-/*                                mobile view navigation                                               */
+/*          mobile view navigation                                               */
 
 const modal = document.getElementById('modal');
 const open = document.getElementById('open');
@@ -10,7 +10,7 @@ open.addEventListener('click', () => modal.classList.add('show-modal'));
 // Hide modal (mobile view navigation)
 close.addEventListener('click', () => modal.classList.remove('show-modal'));
 
-/*                                Reviews Section Slider                                                          */
+/*          Reviews Section Slider                                                          */
 
 import people from './data.js';
 
