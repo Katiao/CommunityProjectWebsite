@@ -98,7 +98,7 @@ html {
   align-items: center; }
   @media screen and (max-width: 41em) {
     .about-me {
-      padding: 4rem 2rem; } }
+      padding: 10rem 2rem; } }
   .about-me h2 {
     font-weight: 40rem;
     position: relative; }
@@ -136,7 +136,7 @@ html {
   background-color: #2b2c2c; }
   @media screen and (max-width: 41em) {
     .services {
-      padding: 5rem 2rem 5rem 2rem; } }
+      padding: 10rem 2rem; } }
   .services-text-box {
     display: flex;
     flex-direction: column;
@@ -221,7 +221,7 @@ html {
   /* cards grid */ }
   @media screen and (max-width: 41em) {
     .latest-works {
-      padding: 5rem 2rem 5rem 2rem; } }
+      padding: 10rem 2rem; } }
   .latest-works-text-box {
     display: flex;
     flex-direction: column;
@@ -411,7 +411,7 @@ html {
   text-align: center; }
   @media screen and (max-width: 41em) {
     .hire-me {
-      padding: 5rem 2rem 5rem 2rem; } }
+      padding: 10rem 2rem; } }
   .hire-me h2 {
     font-weight: 40rem;
     position: relative;
@@ -571,16 +571,14 @@ html {
 
 .reviews-section {
   grid-column: full-start / full-end;
-  padding: 5rem 0;
+  padding: 10rem 2rem;
   background-color: #3c3c3d; }
 
 .reviews-slider {
   width: 85vw;
   max-width: 70rem;
   margin: 0 auto;
-  margin-top: 5rem;
   text-align: center;
-  padding: 1rem 0;
   /* set relative for buttons */
   position: relative; }
   .reviews-slider .reviews h2 {
