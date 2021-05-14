@@ -37,7 +37,11 @@
 
 	& img {
 		width: 70%;
-		clip-path: circle(45%);
+		//clip-path: circle(49%);
+		border-radius: 49%;
+		border: 1px solid #fdb533;
+		background: #fdb533;
+		padding: 0.25rem;
 		justify-self: start;
 
 		@media screen and (max-width: $bp-small) {
