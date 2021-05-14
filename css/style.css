@@ -108,11 +108,11 @@ html {
     .about-me h2::before {
       content: '';
       position: absolute;
-      width: 50%;
+      width: 100%;
       margin-top: 1.2rem;
       height: 0.4rem;
       bottom: -1rem;
-      right: 25%;
+      right: 0;
       background-color: #fdb533; }
   .about-me-content {
     padding-right: 15rem; }
@@ -151,11 +151,11 @@ html {
       .services-text-box h2::before {
         content: '';
         position: absolute;
-        width: 50%;
+        width: 100%;
         margin-top: 1.2rem;
         height: 0.4rem;
         bottom: -1rem;
-        left: 25%;
+        left: 0;
         background-color: #fdb533; }
     .services-text-box p {
       text-align: center;
@@ -236,11 +236,11 @@ html {
       .latest-works-text-box h2::before {
         content: '';
         position: absolute;
-        width: 40%;
+        width: 100%;
         margin-top: 1.2rem;
         height: 0.4rem;
         bottom: -1rem;
-        left: 30%;
+        left: 0;
         background-color: #fdb533; }
     .latest-works-text-box p {
       text-align: center;
@@ -354,11 +354,11 @@ html {
     .work-experiences h2::before {
       content: '';
       position: absolute;
-      width: 35%;
+      width: 100%;
       margin-top: 1.2rem;
       height: 0.4rem;
       bottom: -1rem;
-      left: 32%;
+      left: 0;
       background-color: #fdb533; }
   .work-experiences .center {
     line-height: 2.5rem;
@@ -422,11 +422,11 @@ html {
     .hire-me h2::before {
       content: '';
       position: absolute;
-      width: 20%;
+      width: 100%;
       margin-top: 1.2rem;
       height: 0.4rem;
       bottom: -1rem;
-      left: 39%;
+      left: 0;
       background-color: #fdb533; }
 
 .contact {
@@ -459,11 +459,11 @@ html {
     .contact h2::before {
       content: '';
       position: absolute;
-      width: 35%;
+      width: 100%;
       margin-top: 1.2rem;
       height: 0.4rem;
       bottom: -1rem;
-      left: 30%;
+      left: 0;
       background-color: #fdb533; }
   .contact-info {
     grid-area: two;
@@ -572,7 +572,9 @@ html {
 .reviews-section {
   grid-column: full-start / full-end;
   padding: 10rem 2rem;
-  background-color: #3c3c3d; }
+  background-color: #3c3c3d;
+  display: flex;
+  flex-direction: column; }
 
 .reviews-slider {
   width: 85vw;
@@ -581,22 +583,25 @@ html {
   text-align: center;
   /* set relative for buttons */
   position: relative; }
-  .reviews-slider .reviews h2 {
-    font-weight: 40rem;
-    position: relative;
-    margin-bottom: 8rem; }
-    @media screen and (max-width: 41em) {
-      .reviews-slider .reviews h2 {
-        font-size: 4.5rem; } }
-    .reviews-slider .reviews h2::before {
-      content: '';
-      position: absolute;
-      width: 8%;
-      margin-top: 1.2rem;
-      height: 0.4rem;
-      bottom: -1rem;
-      left: 46%;
-      background-color: #fdb533; }
+
+.reviews {
+  font-weight: 40rem;
+  position: relative;
+  margin-bottom: 8rem;
+  margin: 0 auto;
+  margin-bottom: 8rem; }
+  @media screen and (max-width: 41em) {
+    .reviews {
+      font-size: 4.5rem; } }
+  .reviews::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    margin-top: 1.2rem;
+    height: 0.4rem;
+    bottom: -1rem;
+    left: 0%;
+    background-color: #fdb533; }
 
 .slide-container .img {
   width: 15rem;
