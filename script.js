@@ -10,6 +10,13 @@ open.addEventListener('click', () => modal.classList.add('show-modal'));
 // Hide modal (mobile view navigation)
 close.addEventListener('click', () => modal.classList.remove('show-modal'));
 
+//Hide Modal when user clicks on a menu item (mobile view)
+document.querySelectorAll('.menu-nav').forEach(item => {
+	item.addEventListener('click', event => {
+		modal.classList.remove('show-modal');
+	});
+});
+
 /*          Reviews Section Slider                                                          */
 
 import people from './data.js';
