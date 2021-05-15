@@ -27,8 +27,7 @@
 		font-weight: 900;
 		font-size: 5rem;
 		line-height: 6rem;
-		margin-left: 5rem;
-		margin-top: 1.5rem;
+		margin: 1rem 0 0.5rem 5rem;
 
 		& a {
 			color: #fbd214;
@@ -97,6 +96,10 @@
 		align-items: stretch;
 		& ul {
 			display: none;
+		}
+
+		&-logo {
+			margin-left: 2rem;
 		}
 	}
 }
