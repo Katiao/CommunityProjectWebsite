@@ -508,7 +508,7 @@ html {
     .contact-form label {
       font-size: 1.5rem; }
     .contact-form-input {
-      color: #777777;
+      color: #d1cdcd;
       background-color: #363737;
       border: none;
       outline: none;
@@ -517,9 +517,13 @@ html {
       padding: 1.5rem 2rem;
       font-family: inherit; }
       .contact-form-input:focus {
-        border-bottom: 3px solid #2ecc71; }
+        border-bottom: 3px solid #2ecc71;
+        color: #363737;
+        background-color: whitesmoke; }
       .contact-form-input:focus:invalid {
-        border-bottom: 3px solid #fd9533; }
+        border-bottom: 3px solid #fd9533;
+        color: #363737;
+        background-color: whitesmoke; }
     .contact-form-name-label {
       grid-column: 1 / span 2;
       grid-row: 1 / 2; }
