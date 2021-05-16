@@ -53,7 +53,8 @@
 		text-transform: uppercase;
 		font-weight: 500;
 		letter-spacing: 0.1rem;
-		margin: 0.5rem 0;
+		margin: 1.5rem 0 0.5rem 0;
+		font-size: 1.5rem;
 	}
 
 	& .title {
@@ -82,12 +83,15 @@
 .btn {
 	position: absolute;
 	top: 17.5rem;
+	width: 2.5rem;
+	height: 2.5rem;
 	background: rgb(184, 180, 180);
 	color: #3c3c3d;
 	padding: 0.25rem 0.35rem;
 	border-radius: 0.25rem;
 	border: transparent;
 	cursor: pointer;
+	font-size: 2rem;
 }
 .next-btn {
 	right: -0.5rem;

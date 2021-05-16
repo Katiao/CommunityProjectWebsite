@@ -627,7 +627,8 @@ html {
   text-transform: uppercase;
   font-weight: 500;
   letter-spacing: 0.1rem;
-  margin: 0.5rem 0; }
+  margin: 1.5rem 0 0.5rem 0;
+  font-size: 1.5rem; }
 
 .slide-container .title {
   margin-bottom: 1.25rem;
@@ -651,12 +652,15 @@ html {
 .btn {
   position: absolute;
   top: 17.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
   background: #b8b4b4;
   color: #3c3c3d;
   padding: 0.25rem 0.35rem;
   border-radius: 0.25rem;
   border: transparent;
-  cursor: pointer; }
+  cursor: pointer;
+  font-size: 2rem; }
 
 .next-btn {
   right: -0.5rem; }
@@ -727,7 +731,7 @@ html {
     font-weight: 900;
     font-size: 5rem;
     line-height: 6rem;
-    margin: 1rem 0 0.5rem 5rem; }
+    margin: 0.5rem 0 0.5rem 5rem; }
     .navbar-logo a {
       color: #fbd214; }
   .navbar ul li a:hover {
