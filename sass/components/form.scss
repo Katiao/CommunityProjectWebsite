@@ -94,6 +94,7 @@
 	&-form {
 		grid-area: three;
 		padding-right: 10rem;
+		padding-bottom: 5rem;
 		@media screen and (max-width: $bp-small) {
 			padding-right: 0;
 		}
