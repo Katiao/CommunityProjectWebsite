@@ -445,7 +445,7 @@ html {
     padding-left: 5rem;
     font-weight: 40rem;
     margin-bottom: 10rem; }
-    @media screen and (max-width: 41em) {
+    @media screen and (max-width: 50em) {
       .contact-title {
         justify-self: center;
         align-self: center;
@@ -453,7 +453,7 @@ html {
         padding: 5rem 24rem 5rem 0; } }
   .contact h2 {
     position: absolute; }
-    @media screen and (max-width: 41em) {
+    @media screen and (max-width: 50em) {
       .contact h2 {
         font-size: 4.5rem;
         text-align: center;
@@ -470,20 +470,20 @@ html {
   .contact-info {
     grid-area: two;
     justify-self: center; }
-    @media screen and (max-width: 41em) {
+    @media screen and (max-width: 50em) {
       .contact-info {
         margin-bottom: 2rem; } }
     .contact-info h4 {
       margin-bottom: 3rem;
       font-size: 2rem;
       font-weight: bold; }
-      @media screen and (max-width: 41em) {
+      @media screen and (max-width: 50em) {
         .contact-info h4 {
           text-align: center; } }
     .contact-info ul {
       list-style-type: none;
       font-size: 1.8rem; }
-      @media screen and (max-width: 41em) {
+      @media screen and (max-width: 50em) {
         .contact-info ul {
           font-size: 2rem;
           text-align: center; } }
@@ -502,7 +502,7 @@ html {
     grid-template-rows: repeat(7, auto);
     column-gap: 3rem;
     row-gap: 1.5rem; }
-    @media screen and (min-width: 41em) {
+    @media screen and (min-width: 50em) {
       .contact-form {
         padding-right: 10rem; } }
     .contact-form label {
@@ -535,7 +535,7 @@ html {
       grid-column: 1 / 2;
       grid-row: 3 / 4;
       margin-top: 1.5rem; }
-      @media screen and (max-width: 41em) {
+      @media screen and (max-width: 50em) {
         .contact-form-phone-label {
           grid-column: 1 / span 2;
           grid-row: 3 / 4; } }
@@ -544,7 +544,7 @@ html {
       width: 100%;
       grid-column: 1 / 2;
       grid-row: 4 / 5; }
-      @media screen and (max-width: 41em) {
+      @media screen and (max-width: 50em) {
         .contact-form-phone-input {
           grid-column: 1 / span 2;
           grid-row: 4 / 5; } }
@@ -552,7 +552,7 @@ html {
       grid-column: 2 / 3;
       /* grid-row: 3 / 4; */
       margin-top: 1.5rem; }
-      @media screen and (max-width: 41em) {
+      @media screen and (max-width: 50em) {
         .contact-form-email-label {
           grid-column: 1 / span 2;
           grid-row: 5 / 6; } }
@@ -560,7 +560,7 @@ html {
       grid-column: 2 / 3;
       /* grid-row: 4 / 5; */
       height: 6rem; }
-      @media screen and (max-width: 41em) {
+      @media screen and (max-width: 50em) {
         .contact-form-email-input {
           grid-column: 1 / span 2;
           grid-row: 6 / 7; } }
@@ -577,7 +577,7 @@ html {
       margin-top: 1.5rem;
       width: 20rem;
       font-size: 1.5rem; }
-  @media screen and (max-width: 41em) {
+  @media screen and (max-width: 50em) {
     .contact {
       padding: 5rem 2rem 5rem 2rem;
       grid-template-columns: auto;
