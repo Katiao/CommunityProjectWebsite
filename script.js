@@ -1,4 +1,4 @@
-/*          mobile view navigation                                               */
+/* ********************mobile view navigation***********************************  */
 
 const modal = document.getElementById('modal');
 const open = document.getElementById('open');
@@ -11,13 +11,57 @@ open.addEventListener('click', () => modal.classList.add('show-modal'));
 close.addEventListener('click', () => modal.classList.remove('show-modal'));
 
 //Hide Modal when user clicks on a menu item (mobile view)
-document.querySelectorAll('.menu-nav').forEach(item => {
-	item.addEventListener('click', event => {
+document.querySelectorAll('.menu-nav').forEach((item) => {
+	item.addEventListener('click', (event) => {
 		modal.classList.remove('show-modal');
 	});
 });
 
-/*          Reviews Section Slider                                                          */
+/* ********************* Form Validation ***************************************** */
+
+const form = document.getElementById('form');
+const messageContainer = document.querySelector('.message-container');
+
+let isValid = false;
+
+function validateForm() {
+	//validation using constraint API. Method on form will return boolean value
+	isValid = form.checkValidity();
+
+	// if form is valid, success message
+	if (isValid) {
+		messageContainer.style.visibility = 'visible';
+		messageContainer.style.display = 'inline-block';
+	}
+}
+
+//store submitted form data
+function storeFormData() {
+	const user = {
+		name: form.name.value,
+		phone: form.phone.value,
+		email: form.email.value,
+		message: form.message.value,
+	};
+
+	// do something with user data
+	console.log(user);
+}
+
+//when form is submitted this will run
+function processFormData(e) {
+	e.preventDefault();
+	validateForm();
+	//store data if valid
+	if (isValid) {
+		storeFormData();
+	}
+}
+
+// Event Listener
+form.addEventListener('submit', processFormData);
+
+/* *********************Reviews Section Slider *********************************** */
 
 import people from './data.js';
 
@@ -52,7 +96,7 @@ container.innerHTML = people
 	})
 	.join('');
 
-const startSlider = type => {
+const startSlider = (type) => {
 	// get all three slides: active, last and next
 	const active = document.querySelector('.active');
 	const last = document.querySelector('.last');

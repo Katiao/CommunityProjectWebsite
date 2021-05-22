@@ -438,7 +438,7 @@ html {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 10rem, 1fr;
-  grid-template-areas: ' . one one ' 'two three three';
+  grid-template-areas: ' . one one ' 'two three three' '. four four';
   gap: 1.5rem; }
   .contact-title {
     grid-area: one;
@@ -501,6 +501,19 @@ html {
       text-decoration: none; }
       .contact-info .follow a:hover {
         color: #fdb533; }
+  .contact .message-container {
+    grid-area: four;
+    color: #363737;
+    background-color: #2ecc71;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-top: 20px;
+    padding: 1rem 5rem;
+    justify-self: start;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    visibility: hidden;
+    display: none; }
   .contact-form {
     grid-area: three;
     padding-right: 10rem;
@@ -513,24 +526,23 @@ html {
       .contact-form {
         padding-right: 0; } }
     .contact-form label {
-      font-size: 1.5rem; }
+      font-size: 1.5rem;
+      letter-spacing: 2px; }
     .contact-form-input {
-      color: #d1cdcd;
+      color: whitesmoke;
       background-color: #363737;
       border: none;
       outline: none;
       font-weight: 400;
       font-size: 1.5rem;
+      letter-spacing: 2px;
       padding: 1.5rem 2rem;
-      font-family: inherit; }
-      .contact-form-input:focus {
-        border-bottom: 3px solid #2ecc71;
-        color: #363737;
-        background-color: whitesmoke; }
+      font-family: inherit;
+      transition: all, 0.3s; }
+      .contact-form-input:valid {
+        border-bottom: 3px solid #2ecc71; }
       .contact-form-input:focus:invalid {
-        border-bottom: 3px solid #fd9533;
-        color: #363737;
-        background-color: whitesmoke; }
+        border-bottom: 3px solid #fd9533; }
     .contact-form-name-label {
       grid-column: 1 / span 2;
       grid-row: 1 / 2; }
@@ -583,7 +595,13 @@ html {
       /* grid-row: 7 / 8; */
       margin-top: 1.5rem;
       width: 20rem;
-      font-size: 1.5rem; }
+      font-size: 1.5rem;
+      font-family: 'Roboto', sans-serif;
+      letter-spacing: 2px;
+      text-transform: uppercase; }
+  .contact ::placeholder {
+    color: #d3d0d0;
+    opacity: 0.7; }
   @media screen and (max-width: 41em) {
     .contact {
       padding: 5rem 2rem 5rem 2rem;

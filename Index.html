@@ -2,12 +2,13 @@
 <html lang="en">
 <!-- inspired by https://droitthemes.com/wp/mak/home-dark/ , recreation of similar website for educational purposes. -->
 	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="UTF-8" >
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" >
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+		<meta name="description" content="Portfolio Website Template, Coding after Thirty Community Project">
+		<meta name="keywords" content="Portfolio Website, Template">
 		<title>Community Project Coding After Thirty</title>
-		<link rel="stylesheet" href="css/style.css" />
-		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link rel="stylesheet" href="css/style.css" >
 		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
 		<script
 			src="https://kit.fontawesome.com/31ec6fbc97.js"
@@ -324,24 +325,32 @@
 				</div>
 				<form class="contact-form" id="form" action="">
 					<label class="contact-form-name-label" for="name">NAME</label>
-  					<input class="contact-form-name-input contact-form-input" type="text" id="name" name="name" placeholder="Type your name" required>			 
+  					<input class="contact-form-name-input contact-form-input" type="text" id="name" name="name" placeholder="Full Name" required>			 
 					
 					
-					<label class="contact-form-phone-label" for="number">PHONE NUMBER (Incl. International dialing code )</label>
+					<label class="contact-form-phone-label" for="number">PHONE NUMBER</label>
 						
-					<input class="contact-form-phone-input contact-form-input" type="text" id="number" name="number" placeholder="Use format +49 408XXXXXXX" pattern="^\+(?:[0-9] ?){6,14}[0-9]$" required>
+					<input class="contact-form-phone-input contact-form-input" type="tel" id="number" name="phone" placeholder="+49 408XXXXXXX" pattern="^\+(?:[0-9] ?){6,14}[0-9]$" title="Please include international dialling code (e.g. +49) followed by your phone number" required>
 						
 						
 					<label class="contact-form-email-label" for="email">EMAIL</label>
-  					 <input class="contact-form-email-input contact-form-input" type="email" id="email" name="email" placeholder="Type your email address" required>
+  					 <input class="contact-form-email-input contact-form-input" type="email" id="email" name="email" placeholder="email@address.com" required>
 						
 										 
  					<label class="contact-form-message-label" for="message">YOUR MESSAGE</label>
  					<textarea class="contact-form-message-input contact-form-input" minlength="10" id="message" name="message" placeholder="Your Message" cols="40" rows="8" required></textarea> 
 					 
 					
-					 <input class="contact-form-button yellow-button" type="submit" value="SEND MESSAGE">
-				</form>				
+					 <button class="contact-form-button yellow-button" type="submit"> submit </button>				
+				</form>			
+				<!--  Error/Success Message 
+					hidden by default, only appears when message submitted -->
+					<div class="message-container">
+						<h3 id="message">
+							Success! Form submitted
+						</h3>
+
+					</div>
 			</section> 
 		
 			<!--    Closing section -->
