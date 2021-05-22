@@ -606,7 +606,7 @@ html {
     .contact {
       padding: 5rem 2rem 5rem 2rem;
       grid-template-columns: auto;
-      grid-template-areas: 'one' 'two' 'three'; } }
+      grid-template-areas: 'one' 'two' 'three' 'four'; } }
 
 .reviews-section {
   grid-column: full-start / full-end;
