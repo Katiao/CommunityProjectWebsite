@@ -70,7 +70,7 @@
 	}
 
 	/* for the active link to stay underlined  */
-	&-menu .active::before {
+	&-menu:active::before {
 		content: '';
 		position: absolute;
 		width: 50%;

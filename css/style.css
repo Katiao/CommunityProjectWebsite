@@ -790,7 +790,7 @@ html {
     transition: all 0.3s ease-in-out; }
   .navbar-menu:hover::before {
     width: 50%; }
-  .navbar-menu .active::before {
+  .navbar-menu:active::before {
     content: '';
     position: absolute;
     width: 50%;
