@@ -45,17 +45,6 @@ html {
   grid-template-columns: [full-start] 1fr [center-start] repeat(12, [col-start] minmax(min-content, 9.5rem) [col-end]) [center-end] 1fr [full-end];
   grid-template-rows: 20rem, repeat(3, auto), 40vw, repeat(6, auto); }
 
-/* scrolling animation */
-.box.show {
-  animation: fadein 2s ease-out 0.15s;
-  animation-fill-mode: backwards; }
-
-@keyframes fadein {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-
 .yellow-button {
   background-color: #fdb533;
   font-weight: 500;
@@ -87,6 +76,23 @@ html {
   .grey-button:hover {
     background-color: #fdb533;
     color: #3c3c3d; }
+
+.back-to-top {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 0.5rem;
+  background-color: #fdb533;
+  border-color: #fdb533;
+  color: #2b2c2c;
+  border-radius: 3px;
+  width: 4rem;
+  height: 4rem;
+  cursor: pointer;
+  transform: translateY(200%);
+  transition: 0.4s ease; }
+  .back-to-top.show {
+    transform: translateY(0); }
 
 .about-me {
   grid-column: full-start / full-end;
@@ -946,16 +952,3 @@ footer {
       color: inherit; }
       footer p a:hover {
         color: #fdb533; }
-
-.back-to-top {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  margin: 0.5rem;
-  background-color: #fdb533;
-  border-color: #fdb533;
-  color: #2b2c2c;
-  border-radius: 3px;
-  width: 4rem;
-  height: 4rem;
-  cursor: pointer; }
