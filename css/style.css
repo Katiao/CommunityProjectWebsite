@@ -758,10 +758,6 @@ html {
     list-style-type: none;
     padding: 0 8rem;
     display: flex; }
-  .navbar-menu {
-    font-size: 2rem;
-    color: #fff;
-    font-weight: 700; }
   .navbar-logo {
     font-weight: 900;
     font-size: 5rem;
@@ -769,6 +765,12 @@ html {
     margin: 0.5rem 0 0.5rem 5rem; }
     .navbar-logo a {
       color: #fbd214; }
+  .navbar ul li a:link {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700; }
+  .navbar ul li a:visited {
+    color: #fff; }
   .navbar ul li a:hover {
     color: #fbd214; }
   .navbar ul li a:active {
