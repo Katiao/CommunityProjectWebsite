@@ -26,7 +26,7 @@ let isValid = false;
 
 function validateForm() {
 	//validation using constraint API. Method on form will return boolean value
-	isValid = form.checkValidity();
+	const isValid = form.checkValidity();
 
 	// if form is valid, success message
 	if (isValid) {

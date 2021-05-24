@@ -823,7 +823,8 @@ html {
     list-style-type: none;
     margin-left: 1rem; }
     .modal-container ul li {
-      margin-bottom: 2rem; }
+      margin-bottom: 2rem;
+      font-size: 2rem; }
       .modal-container ul li a {
         color: inherit; }
         .modal-container ul li a:hover {
