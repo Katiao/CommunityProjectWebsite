@@ -77,6 +77,22 @@ html {
     background-color: #fdb533;
     color: #3c3c3d; }
 
+.btn-more {
+  background-color: #3c3c3d;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 4rem;
+  padding: 0 2rem;
+  width: 15rem;
+  color: #fdb533;
+  border: 0.1rem solid #fdb533;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 0.5s; }
+  .btn-more:hover {
+    background-color: #fdb533;
+    color: #3c3c3d; }
+
 .back-to-top {
   position: fixed;
   bottom: 0;
@@ -186,7 +202,8 @@ html {
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
-  padding: 8rem; }
+  padding: 8rem;
+  transition: transform 0.5s ease; }
   .card:hover {
     transform: translateY(-1.5rem) scale(1.03); }
   .card h3 {
@@ -739,6 +756,70 @@ html {
 .slide.last {
   transform: translateX(-100%); }
 
+.latest-blogs {
+  grid-column: full-start / full-end;
+  padding: 10rem 2rem;
+  background-color: #3c3c3d;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .latest-blogs h2 {
+    font-weight: 40rem;
+    position: relative;
+    margin-bottom: 5rem; }
+    @media screen and (max-width: 41em) {
+      .latest-blogs h2 {
+        font-size: 4.5rem; } }
+    .latest-blogs h2::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      margin-top: 1.2rem;
+      height: 0.4rem;
+      bottom: -1rem;
+      left: 0;
+      background-color: #fdb533; }
+
+.articles {
+  width: 90vw;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; }
+  @media screen and (max-width: 41em) {
+    .articles {
+      flex-direction: column;
+      align-items: center; } }
+
+.article {
+  width: 25vw;
+  background-color: #54595f;
+  border: solid 0.1rem black;
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2rem;
+  transition: transform 0.5s ease; }
+  @media screen and (max-width: 41em) {
+    .article {
+      width: 45vw; } }
+  .article img {
+    width: 100%;
+    padding-bottom: 1rem; }
+  .article:hover {
+    transform: translateY(-1.5rem) scale(1.03); }
+
+.heading {
+  font-size: 2.5rem; }
+
+.blog-text p {
+  font-size: 1.5rem;
+  padding-bottom: 1.5rem; }
+
+.post-info {
+  margin: 0.5rem 0; }
+
 /* grid layout for top menu and logo */
 .navbar {
   grid-column: full-start / full-end;
@@ -824,7 +905,7 @@ html {
   top: 0;
   left: 0;
   right: 0;
-  height: 32rem;
+  height: 36rem;
   z-index: 100;
   font-size: 1.5rem; }
   .modal-container ul {
