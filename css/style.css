@@ -820,6 +820,63 @@ html {
 .post-info {
   margin: 0.5rem 0; }
 
+.blog-modal-container {
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  position: fixed;
+  top: 10%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: initial; }
+  .blog-modal-container.show-blog-modal {
+    display: block; }
+
+.blog-modal {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  width: 60rem;
+  overflow-y: auto;
+  height: 90vh;
+  animation-name: blogmodalopen;
+  animation-duration: 1s; }
+
+.modal-header {
+  background-color: #fdb533;
+  color: white;
+  padding: 1.5rem; }
+
+.blog-content {
+  padding: 2rem;
+  color: black; }
+
+.post-info {
+  margin: 1.5rem 0;
+  font-size: 1.5rem; }
+
+.close-btn {
+  background: transparent;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: white;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  cursor: pointer;
+  border: transparent; }
+
+@keyframes blogmodalopen {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
 /* grid layout for top menu and logo */
 .navbar {
   grid-column: full-start / full-end;

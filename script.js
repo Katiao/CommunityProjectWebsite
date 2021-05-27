@@ -166,10 +166,11 @@ prevBtn.addEventListener('click', () => {
 
 const BLOG_URL = 'http://localhost:1337/blog-posts';
 const rootNode = document.getElementById('articles');
+const modalNode = document.getElementById('blog-modal');
 
 //function that generates blog HTML template:
 function blogHTMLTemplate(data) {
-	const { title, description, date, minread } = data;
+	const { id, title, description, date, minread } = data;
 	const img = data.image.name;
 	return `<Article class="article">
 	<img src=${img}>
@@ -178,12 +179,13 @@ function blogHTMLTemplate(data) {
 		<div class="post-info"><span>${date}</span> <br/> 
 		<span>min read: ${minread} mins</span></div>
 		<p> ${description}</p>
-		<button class="btn-more">Read More</button>
+		<button class="btn-more btn${id}">Read More</button>
 	</div>
 </Article>`;
 }
 
 //Loop through data and render it to the DOM
+//Blog HTML template
 function renderData(node, data) {
 	const html = data.map((item) => blogHTMLTemplate(item)).join('');
 	node.innerHTML = html;
@@ -195,6 +197,7 @@ async function getData(url) {
 		const response = await fetch(url);
 		const data = await response.json();
 		renderData(rootNode, data);
+		//renderModalData(modalNode, data);
 	} catch (error) {
 		console.log('ERROR: ', error.message);
 	}
@@ -202,3 +205,62 @@ async function getData(url) {
 
 //call function
 getData(BLOG_URL);
+
+//function that generates blog modal HTML template & loops through it and renders to DOM:
+
+function renderModalData(node, data) {
+	const html = data
+		.map((item) => {
+			const { title, article, date } = item;
+			console.log(title);
+			return ` <Article class="blog-modal">
+	<button class="close-btn" id="blog-close">
+		<i class="fa fa-times"></i>
+	</button>
+	<div class="modal-header">
+		<h4 class="heading">${title}</h4>
+
+	</div>					
+			
+	<div class="blog-content">
+
+		<div class="post-info">
+			<span>${date}</span>
+		
+		</div>
+
+		${article}
+	</div>
+		
+</Article>`;
+		})
+		.join('');
+
+	node.innerHTML = html;
+}
+
+/* *********************Blog section - Modal pop up *********************************** */
+
+const closeArticle = document.getElementById('blog-close');
+const articleModal = document.getElementById('blog-modal');
+
+//Show modal & fetch data from API to display specific blog article:
+//As button dynamically fetched, use event delegation, add click event listener on document body:
+document.body.addEventListener('click', callMyFunctions);
+//then target btn class:
+function showBlogModal(e) {
+	if (e.target.className === 'btn-more') {
+		articleModal.classList.add('show-blog-modal');
+	}
+}
+
+//function to call both my functions at the same time when user clicks button:
+function callMyFunctions(e) {
+	showBlogModal(e);
+	fetchArticle();
+}
+
+//Hide modal
+/* closeArticle.addEventListener('click', () =>
+	articleModal.classList.remove('show-blog-modal')
+); */
