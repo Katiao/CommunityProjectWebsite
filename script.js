@@ -170,7 +170,7 @@ const modalNode = document.getElementById('blog-modal');
 
 //function that generates blog HTML template:
 function blogHTMLTemplate(data) {
-	const { id, title, description, date, minread } = data;
+	const { title, description, date, minread } = data;
 	const img = data.image.name;
 	return `<Article class="article">
 	<img src=${img}>
@@ -179,7 +179,7 @@ function blogHTMLTemplate(data) {
 		<div class="post-info"><span>${date}</span> <br/> 
 		<span>min read: ${minread} mins</span></div>
 		<p> ${description}</p>
-		<button class="btn-more btn${id}">Read More</button>
+		<button class="btn-more">Read More</button>
 	</div>
 </Article>`;
 }
@@ -197,7 +197,7 @@ async function getData(url) {
 		const response = await fetch(url);
 		const data = await response.json();
 		renderData(rootNode, data);
-		//renderModalData(modalNode, data);
+		renderModalData(modalNode, data);
 	} catch (error) {
 		console.log('ERROR: ', error.message);
 	}
@@ -246,7 +246,7 @@ const articleModal = document.getElementById('blog-modal');
 
 //Show modal & fetch data from API to display specific blog article:
 //As button dynamically fetched, use event delegation, add click event listener on document body:
-document.body.addEventListener('click', callMyFunctions);
+document.body.addEventListener('click', showBlogModal);
 //then target btn class:
 function showBlogModal(e) {
 	if (e.target.className === 'btn-more') {
@@ -255,10 +255,10 @@ function showBlogModal(e) {
 }
 
 //function to call both my functions at the same time when user clicks button:
-function callMyFunctions(e) {
+/* function callMyFunctions(e) {
 	showBlogModal(e);
 	fetchArticle();
-}
+} */
 
 //Hide modal
 /* closeArticle.addEventListener('click', () =>
