@@ -161,3 +161,44 @@ nextBtn.addEventListener('click', () => {
 prevBtn.addEventListener('click', () => {
 	startSlider('prev');
 });
+
+/* *********************Blog section - fetch data from API using Strapi *********************************** */
+
+const BLOG_URL = 'http://localhost:1337/blog-posts';
+const rootNode = document.getElementById('articles');
+
+//function that generates blog HTML template:
+function blogHTMLTemplate(data) {
+	const { title, description, date, minread } = data;
+	const img = data.image.name;
+	return `<Article class="article">
+	<img src=${img}>
+	<div class="blog-text">
+		<h4 class="heading">${title}</h4>
+		<div class="post-info"><span>${date}</span> <br/> 
+		<span>min read: ${minread} mins</span></div>
+		<p> ${description}</p>
+		<button class="btn-more">Read More</button>
+	</div>
+</Article>`;
+}
+
+//Loop through data and render it to the DOM
+function renderData(node, data) {
+	const html = data.map((item) => blogHTMLTemplate(item)).join('');
+	node.innerHTML = html;
+}
+
+//Fetch data from Strapi API
+async function getData(url) {
+	try {
+		const response = await fetch(url);
+		const data = await response.json();
+		renderData(rootNode, data);
+	} catch (error) {
+		console.log('ERROR: ', error.message);
+	}
+}
+
+//call function
+getData(BLOG_URL);
