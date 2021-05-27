@@ -244,7 +244,7 @@ function renderModalData(node, data) {
 const closeArticle = document.getElementById('blog-close');
 const articleModal = document.getElementById('blog-modal');
 
-//Show modal & fetch data from API to display specific blog article:
+//Show modal
 //As button dynamically fetched, use event delegation, add click event listener on document body:
 document.body.addEventListener('click', showBlogModal);
 //then target btn class:
@@ -261,6 +261,9 @@ function showBlogModal(e) {
 } */
 
 //Hide modal
-/* closeArticle.addEventListener('click', () =>
-	articleModal.classList.remove('show-blog-modal')
-); */
+document.body.addEventListener('click', hideBlogModal);
+function hideBlogModal(e) {
+	if (e.target.parentElement.className === 'close-btn') {
+		articleModal.classList.remove('show-blog-modal');
+	}
+}
