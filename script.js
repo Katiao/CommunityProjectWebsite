@@ -164,7 +164,7 @@ prevBtn.addEventListener('click', () => {
 
 /* *********************Blog section - fetch data from API using Strapi *********************************** */
 
-const BLOG_URL = 'http://localhost:1337/blog-posts';
+const BLOG_URL = 'https://community-project-katia.herokuapp.com/';
 const rootNode = document.getElementById('articles');
 const modalNode = document.getElementById('blog-modal');
 
