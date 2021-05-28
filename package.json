@@ -1,48 +1,23 @@
 {
-  "name": "community-project",
-  "private": true,
-  "version": "0.1.0",
-  "description": "A Strapi application",
-  "scripts": {
-    "develop": "strapi develop",
-    "start": "strapi start",
-    "build": "strapi build",
-    "strapi": "strapi",
-    "compile:sass": "node-sass sass/main.scss css/style.css -w"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Kitkatdia/CommunityProjectWebsite.git"
-  },
-  "devDependencies": {
-    "node-sass": "^5.0.0"
-  },
-  "dependencies": {
-    "strapi": "3.6.2",
-    "strapi-admin": "3.6.2",
-    "strapi-utils": "3.6.2",
-    "strapi-plugin-content-type-builder": "3.6.2",
-    "strapi-plugin-content-manager": "3.6.2",
-    "strapi-plugin-users-permissions": "3.6.2",
-    "strapi-plugin-email": "3.6.2",
-    "strapi-plugin-upload": "3.6.2",
-    "strapi-plugin-i18n": "3.6.2",
-    "strapi-connector-bookshelf": "3.6.2",
-    "knex": "0.21.18",
-    "sqlite3": "5.0.0",
-    "pg": "^8.6.0",
-    "pg-connection-string": "^2.5.0",
-    "strapi-provider-upload-aws-s3": "^3.6.2"
-  },
-  "author": {
-    "name": "Katia"
-  },
-  "strapi": {
-    "uuid": "95b11e6b-df35-4e01-a7ea-2217d43f1240"
-  },
-  "engines": {
-    "node": ">=10.16.0 <=14.x.x",
-    "npm": "^6.0.0"
-  },
-  "license": "MIT"
+	"name": "communityproject",
+	"version": "1.0.0",
+	"description": "Community Project Website",
+	"main": "script.js",
+	"scripts": {
+		"compile:sass": "node-sass sass/main.scss css/style.css -w",
+		"start": "node script.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Kitkatdia/CommunityProjectWebsite.git"
+	},
+	"author": "Katia",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Kitkatdia/CommunityProjectWebsite/issues"
+	},
+	"homepage": "https://github.com/Kitkatdia/CommunityProjectWebsite#readme",
+	"devDependencies": {
+		"node-sass": "^5.0.0"
+	}
 }
