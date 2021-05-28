@@ -18,5 +18,8 @@
 	"homepage": "https://github.com/Kitkatdia/CommunityProjectWebsite#readme",
 	"devDependencies": {
 		"node-sass": "^5.0.0"
+	},
+	"dependencies": {
+		"pg": "^8.6.0"
 	}
 }
