@@ -1,3 +1,5 @@
+import people from './data.js';
+
 /* ********************mobile view navigation***********************************  */
 
 const modal = document.getElementById('modal');
@@ -87,8 +89,6 @@ form.addEventListener('submit', processFormData);
 
 /* *********************Reviews Section Slider *********************************** */
 
-import people from './data.js';
-
 const container = document.querySelector('.slide-container');
 const nextBtn = document.querySelector('.next-btn');
 const prevBtn = document.querySelector('.prev-btn');
@@ -164,22 +164,23 @@ prevBtn.addEventListener('click', () => {
 
 /* *********************Blog section - fetch data from API using Strapi *********************************** */
 
-const BLOG_URL = 'https://community-project-katia.herokuapp.com/';
+const BLOG_URL = 'https://pure-atoll-89315.herokuapp.com/blogs';
 const rootNode = document.getElementById('articles');
 const modalNode = document.getElementById('blog-modal');
+const articleModal = document.getElementById('blog-modal');
 
 //function that generates blog HTML template:
 function blogHTMLTemplate(data) {
 	const { title, description, date, minread } = data;
 	const img = data.image.name;
-	return `<Article class="article">
+	return `<Article class="article" id="article-${data.id}">
 	<img src=${img}>
 	<div class="blog-text">
 		<h4 class="heading">${title}</h4>
 		<div class="post-info"><span>${date}</span> <br/> 
 		<span>min read: ${minread} mins</span></div>
 		<p> ${description}</p>
-		<button class="btn-more">Read More</button>
+		<button class="btn-more" id="${data.id}">Read More</button>
 	</div>
 </Article>`;
 }
@@ -197,7 +198,6 @@ async function getData(url) {
 		const response = await fetch(url);
 		const data = await response.json();
 		renderData(rootNode, data);
-		renderModalData(modalNode, data);
 	} catch (error) {
 		console.log('ERROR: ', error.message);
 	}
@@ -206,59 +206,66 @@ async function getData(url) {
 //call function
 getData(BLOG_URL);
 
-//function that generates blog modal HTML template & loops through it and renders to DOM:
-
-function renderModalData(node, data) {
-	const html = data
-		.map((item) => {
-			const { title, article, date } = item;
-			console.log(title);
-			return ` <Article class="blog-modal">
-	<button class="close-btn" id="blog-close">
-		<i class="fa fa-times"></i>
-	</button>
-	<div class="modal-header">
-		<h4 class="heading">${title}</h4>
-
-	</div>					
-			
-	<div class="blog-content">
-
-		<div class="post-info">
-			<span>${date}</span>
-		
-		</div>
-
-		${article}
-	</div>
-		
-</Article>`;
-		})
-		.join('');
-
-	node.innerHTML = html;
-}
-
 /* *********************Blog section - Modal pop up *********************************** */
 
-const closeArticle = document.getElementById('blog-close');
-const articleModal = document.getElementById('blog-modal');
+//Blog HTML template:
+function ModalTemplateData(data) {
+	const { title, article, date } = data;
+	return `<Article class="blog-modal">
+			<button class="close-btn" id="blog-close">
+				<i class="fa fa-times"></i>
+			</button>
+			<div class="modal-header">
+				<h4 class="heading">${title}</h4>
+		
+			</div>					
+					
+			<div class="blog-content">
+		
+				<div class="post-info">
+					<span>${date}</span>
+				
+				</div>
+		
+				${article}
+			</div>
+				
+		</Article>`;
+}
+
+//function that finds the blog data which matches ID and renders Blog HTML to DOM:
+function renderModalData(node, data, targetID) {
+	data.filter((item) => {
+		if (item.id === targetID) {
+			const html = ModalTemplateData(item);
+			node.innerHTML = html;
+		}
+	});
+}
+
+//2nd Fetch data from Strapi API for Modal Pop up data
+async function getModalData(url, targetID) {
+	try {
+		const response = await fetch(url);
+		const data = await response.json();
+		renderModalData(modalNode, data, targetID);
+	} catch (error) {
+		console.log('ERROR: ', error.message);
+	}
+}
 
 //Show modal
 //As button dynamically fetched, use event delegation, add click event listener on document body:
 document.body.addEventListener('click', showBlogModal);
 //then target btn class:
 function showBlogModal(e) {
+	const targetID = Number(e.target.id);
 	if (e.target.className === 'btn-more') {
+		//call function
+		getModalData(BLOG_URL, targetID);
 		articleModal.classList.add('show-blog-modal');
 	}
 }
-
-//function to call both my functions at the same time when user clicks button:
-/* function callMyFunctions(e) {
-	showBlogModal(e);
-	fetchArticle();
-} */
 
 //Hide modal
 document.body.addEventListener('click', hideBlogModal);
