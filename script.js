@@ -1,4 +1,5 @@
 import people from './data.js';
+import cacheData from './cache-data.js';
 
 /* ********************mobile view navigation***********************************  */
 
@@ -198,8 +199,10 @@ async function getData(url) {
 		const response = await fetch(url);
 		const data = await response.json();
 		renderData(rootNode, data);
+		//set global cache to prevent duplicate queries:
+		cacheData.data = data;
 	} catch (error) {
-		console.log('ERROR: ', error.message);
+		console.log('THERE WAS AN ERROR: ', error.message);
 	}
 }
 
@@ -208,50 +211,33 @@ getData(BLOG_URL);
 
 /* *********************Blog section - Modal pop up *********************************** */
 
-//Blog HTML template:
-function ModalTemplateData(data) {
-	const { title, article, date } = data;
-	return `<Article class="blog-modal">
-			<button class="close-btn" id="blog-close">
-				<i class="fa fa-times"></i>
-			</button>
-			<div class="modal-header">
-				<h4 class="heading">${title}</h4>
-		
-			</div>					
-					
-			<div class="blog-content">
-		
-				<div class="post-info">
-					<span>${date}</span>
-				
-				</div>
-		
-				${article}
-			</div>
-				
-		</Article>`;
-}
+// Function that generates blog modal HTML template & loops through it and renders to DOM:
 
-//function that finds the blog data which matches ID and renders Blog HTML to DOM:
-function renderModalData(node, data, targetID) {
-	data.filter((item) => {
-		if (item.id === targetID) {
-			const html = ModalTemplateData(item);
-			node.innerHTML = html;
-		}
-	});
-}
+function renderModalData(node, data) {
+	const html = data
+		.map((item) => {
+			const { title, article, date } = item;
+			return ` <Article class="blog-modal">
+	<button class="close-btn" id="blog-close">
+		<i class="fa fa-times"></i>
+	</button>
+	<div class="modal-header">
+		<h4 class="heading">${title}</h4>
+	</div>					
+			
+	<div class="blog-content">
+		<div class="post-info">
+			<span>${date}</span>
+		
+		</div>
+		${article}
+	</div>
+		
+</Article>`;
+		})
+		.join('');
 
-//2nd Fetch data from Strapi API for Modal Pop up data
-async function getModalData(url, targetID) {
-	try {
-		const response = await fetch(url);
-		const data = await response.json();
-		renderModalData(modalNode, data, targetID);
-	} catch (error) {
-		console.log('ERROR: ', error.message);
-	}
+	node.innerHTML = html;
 }
 
 //Show modal
@@ -259,11 +245,12 @@ async function getModalData(url, targetID) {
 document.body.addEventListener('click', showBlogModal);
 //then target btn class:
 function showBlogModal(e) {
+	// Targeted id of button and used it to get each item from the Strapi data return. Note, I'm using "[targetID-1]" because the data provided comes back as index items in the array, starting at 0.
 	const targetID = Number(e.target.id);
 	if (e.target.className === 'btn-more') {
-		//call function
-		getModalData(BLOG_URL, targetID);
+		var selectedData = cacheData.data[targetID - 1];
 		articleModal.classList.add('show-blog-modal');
+		renderModalData(modalNode, [selectedData]);
 	}
 }
 
