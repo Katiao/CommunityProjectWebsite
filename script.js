@@ -167,8 +167,8 @@ prevBtn.addEventListener('click', () => {
 
 const BLOG_URL = 'https://pure-atoll-89315.herokuapp.com/blogs';
 const rootNode = document.getElementById('articles');
+//modalNode is the root of the Modal
 const modalNode = document.getElementById('blog-modal');
-const articleModal = document.getElementById('blog-modal');
 
 //function that generates blog HTML template:
 function blogHTMLTemplate(data) {
@@ -227,10 +227,13 @@ function renderModalData(node, data) {
 			
 	<div class="blog-content">
 		<div class="post-info">
-			<span>${date}</span>
+			<span class="post-info">${date}</span>
 		
 		</div>
-		${article}
+		<div class="article-text">
+			${article}
+		</div>
+		
 	</div>
 		
 </Article>`;
@@ -249,15 +252,39 @@ function showBlogModal(e) {
 	const targetID = Number(e.target.id);
 	if (e.target.className === 'btn-more') {
 		var selectedData = cacheData.data[targetID - 1];
-		articleModal.classList.add('show-blog-modal');
+		modalNode.classList.add('show-blog-modal');
 		renderModalData(modalNode, [selectedData]);
 	}
 }
 
-//Hide modal
+//add event listener on root of Modal
+modalNode.addEventListener('click', rootClick);
+
+//hide modal upon root click (clicking anywhere on page)
+function rootClick() {
+	modalNode.classList.remove('show-blog-modal');
+}
+
+//Hide modal when clicking on close button:
 document.body.addEventListener('click', hideBlogModal);
 function hideBlogModal(e) {
 	if (e.target.parentElement.className === 'close-btn') {
-		articleModal.classList.remove('show-blog-modal');
+		modalNode.classList.remove('show-blog-modal');
+	}
+}
+
+//add event listener on modal body and make sure modal does not close when user clicks inside modal:
+document.body.addEventListener('click', keepOpen);
+
+//keepOpen targets different areas of modal:
+function keepOpen(e) {
+	if (
+		e.target.className === 'article-text' ||
+		e.target.className === 'blog-modal' ||
+		e.target.className === 'post-info' ||
+		e.target.className === 'heading'
+	) {
+		modalNode.classList.add('show-blog-modal');
+		console.log(e);
 	}
 }

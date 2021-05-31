@@ -80,7 +80,7 @@
 //modal pop out styling
 
 .blog-modal-container {
-	background-color: rgba(0, 0, 0, 0.6);
+	background-color: rgba(0, 0, 0, 0.8);
 	display: none;
 	position: fixed;
 	top: 10%;
@@ -88,6 +88,7 @@
 	right: 0;
 	bottom: 0;
 	overflow-y: initial;
+	z-index: 500;
 	//modal shown when this class is added. Fade-in animation added below.
 	&.show-blog-modal {
 		display: block;
@@ -138,6 +139,11 @@
 	cursor: pointer;
 	border: transparent;
 }
+
+.article-text {
+	font-size: 1.5rem;
+}
+
 //keyframe for opening modal animation
 @keyframes blogmodalopen {
 	from {

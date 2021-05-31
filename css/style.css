@@ -821,14 +821,15 @@ html {
   margin: 0.5rem 0; }
 
 .blog-modal-container {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.8);
   display: none;
   position: fixed;
   top: 10%;
   left: 0;
   right: 0;
   bottom: 0;
-  overflow-y: initial; }
+  overflow-y: initial;
+  z-index: 500; }
   .blog-modal-container.show-blog-modal {
     display: block; }
 
@@ -870,6 +871,9 @@ html {
   right: 1.5rem;
   cursor: pointer;
   border: transparent; }
+
+.article-text {
+  font-size: 1.5rem; }
 
 @keyframes blogmodalopen {
   from {
