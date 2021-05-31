@@ -1,58 +1,58 @@
 .yellow-button {
-	background-color: #fdb533;
+	background-color: $yellow-color;
 	font-weight: 500;
 	font-size: 2rem;
 	line-height: 6rem;
 	padding: 0 4rem;
 	width: 22rem;
 	color: white;
-	border: 0.1rem solid #fdb533;
+	border: 0.1rem solid $yellow-color;
 	border-radius: 0.5rem;
 	cursor: pointer;
 	transition: 0.5s;
 
 	&:hover {
-		background-color: #3c3c3d;
-		color: #fdb533;
+		background-color: $color-background-3;
+		color: $yellow-color;
 	}
 }
 
 .grey-button {
-	background-color: #3c3c3d;
+	background-color: $color-background-3;
 	font-weight: 500;
 	font-size: 2rem;
 	line-height: 6rem;
 	padding: 0 4rem;
 	width: 22rem;
-	color: #fdb533;
-	border: 0.1rem solid #fdb533;
+	color: $yellow-color;
+	border: 0.1rem solid $yellow-color;
 	border-radius: 0.5rem;
 	cursor: pointer;
 	transition: 0.5s;
 
 	&:hover {
-		background-color: #fdb533;
-		color: #3c3c3d;
+		background-color: $yellow-color;
+		color: $color-background-3;
 	}
 }
 
 //blog buttons
 .btn-more {
-	background-color: #3c3c3d;
+	background-color: $color-background-3;
 	font-weight: 500;
 	font-size: 1.5rem;
 	line-height: 4rem;
 	padding: 0 2rem;
 	width: 15rem;
-	color: #fdb533;
-	border: 0.1rem solid #fdb533;
+	color: $yellow-color;
+	border: 0.1rem solid $yellow-color;
 	border-radius: 0.5rem;
 	cursor: pointer;
 	transition: 0.5s;
 
 	&:hover {
-		background-color: #fdb533;
-		color: #3c3c3d;
+		background-color: $yellow-color;
+		color: $color-background-3;
 	}
 }
 
@@ -62,9 +62,9 @@
 	bottom: 0;
 	right: 0;
 	margin: 0.5rem;
-	background-color: #fdb533;
-	border-color: #fdb533;
-	color: #2b2c2c;
+	background-color: $yellow-color;
+	border-color: $yellow-color;
+	color: $color-background-2;
 	border-radius: 3px;
 	width: 4rem;
 	height: 4rem;

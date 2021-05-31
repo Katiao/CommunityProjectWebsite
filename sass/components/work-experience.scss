@@ -1,6 +1,6 @@
 .work-experiences {
 	grid-column: full-start / full-end;
-	background-color: #2b2c2c;
+	background-color: $color-background-2;
 	padding: 10rem 0;
 	display: flex;
 	flex-direction: column;
@@ -27,7 +27,7 @@
 			height: 0.4rem;
 			bottom: -1rem;
 			left: 0;
-			background-color: #fdb533;
+			background-color: $yellow-color;
 		}
 	}
 
@@ -78,7 +78,7 @@
 	}
 
 	&:hover {
-		background: #fdb533;
+		background: $yellow-color;
 		cursor: pointer;
 		transition: 0.6s;
 
@@ -86,7 +86,7 @@
 		p,
 		.date,
 		.company {
-			color: #2b2c2c;
+			color: $color-background-2;
 		}
 	}
 }

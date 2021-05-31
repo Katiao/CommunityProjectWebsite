@@ -13,7 +13,7 @@
 		font-weight: 900;
 		font-size: 7rem;
 		line-height: 6rem;
-		color: #fbd214;
+		color: $yellow-color;
 		padding-bottom: 2rem;
 	}
 
@@ -33,7 +33,7 @@
 		color: rgba(255, 255, 255, 0.5);
 
 		&:hover {
-			color: #fdb533;
+			color: $yellow-color;
 		}
 	}
 }
@@ -53,7 +53,7 @@ footer {
 			color: inherit;
 
 			&:hover {
-				color: #fdb533;
+				color: $yellow-color;
 			}
 		}
 	}

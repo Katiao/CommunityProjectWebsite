@@ -1,7 +1,7 @@
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.4;
-  color: #cccccc;
+  color: whitesmoke;
   background-color: #54595f; }
 
 a {
@@ -46,20 +46,20 @@ html {
   grid-template-rows: 20rem, repeat(3, auto), 40vw, repeat(6, auto); }
 
 .yellow-button {
-  background-color: #fdb533;
+  background-color: #feb633;
   font-weight: 500;
   font-size: 2rem;
   line-height: 6rem;
   padding: 0 4rem;
   width: 22rem;
   color: white;
-  border: 0.1rem solid #fdb533;
+  border: 0.1rem solid #feb633;
   border-radius: 0.5rem;
   cursor: pointer;
   transition: 0.5s; }
   .yellow-button:hover {
     background-color: #3c3c3d;
-    color: #fdb533; }
+    color: #feb633; }
 
 .grey-button {
   background-color: #3c3c3d;
@@ -68,13 +68,13 @@ html {
   line-height: 6rem;
   padding: 0 4rem;
   width: 22rem;
-  color: #fdb533;
-  border: 0.1rem solid #fdb533;
+  color: #feb633;
+  border: 0.1rem solid #feb633;
   border-radius: 0.5rem;
   cursor: pointer;
   transition: 0.5s; }
   .grey-button:hover {
-    background-color: #fdb533;
+    background-color: #feb633;
     color: #3c3c3d; }
 
 .btn-more {
@@ -84,13 +84,13 @@ html {
   line-height: 4rem;
   padding: 0 2rem;
   width: 15rem;
-  color: #fdb533;
-  border: 0.1rem solid #fdb533;
+  color: #feb633;
+  border: 0.1rem solid #feb633;
   border-radius: 0.5rem;
   cursor: pointer;
   transition: 0.5s; }
   .btn-more:hover {
-    background-color: #fdb533;
+    background-color: #feb633;
     color: #3c3c3d; }
 
 .back-to-top {
@@ -98,8 +98,8 @@ html {
   bottom: 0;
   right: 0;
   margin: 0.5rem;
-  background-color: #fdb533;
-  border-color: #fdb533;
+  background-color: #feb633;
+  border-color: #feb633;
   color: #2b2c2c;
   border-radius: 3px;
   width: 4rem;
@@ -135,7 +135,7 @@ html {
       height: 0.4rem;
       bottom: -1rem;
       right: 0;
-      background-color: #fdb533; }
+      background-color: #feb633; }
   .about-me-content {
     padding-right: 15rem; }
     @media screen and (max-width: 41em) {
@@ -178,7 +178,7 @@ html {
         height: 0.4rem;
         bottom: -1rem;
         left: 0;
-        background-color: #fdb533; }
+        background-color: #feb633; }
     .services-text-box p {
       text-align: center;
       line-height: 2.5rem; }
@@ -264,7 +264,7 @@ html {
         height: 0.4rem;
         bottom: -1rem;
         left: 0;
-        background-color: #fdb533; }
+        background-color: #feb633; }
     .latest-works-text-box p {
       text-align: center;
       line-height: 2.5rem; }
@@ -286,7 +286,7 @@ html {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 20vw);
     gap: 1.5rem; }
-    @media screen and (max-width: 50em) {
+    @media screen and (max-width: 51em) {
       .latest-works-cards {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(4, 40vw); } }
@@ -299,7 +299,7 @@ html {
 .cardOne {
   grid-row: 1 / span 2;
   grid-column: 1 / span 2; }
-  @media screen and (max-width: 50em) {
+  @media screen and (max-width: 51em) {
     .cardOne {
       grid-row: 1 / 2;
       grid-column: 1 / 2; } }
@@ -307,7 +307,7 @@ html {
 .cardEight {
   grid-row: 3 / 4;
   grid-column: 3 / span 2; }
-  @media screen and (max-width: 50em) {
+  @media screen and (max-width: 51em) {
     .cardEight {
       grid-column: 2 / 3; } }
   @media screen and (max-width: 41em) {
@@ -382,7 +382,7 @@ html {
       height: 0.4rem;
       bottom: -1rem;
       left: 0;
-      background-color: #fdb533; }
+      background-color: #feb633; }
   .work-experiences .center {
     line-height: 2.5rem;
     text-align: center;
@@ -392,7 +392,7 @@ html {
   display: grid;
   grid-template-columns: repeat(3, 30rem); }
 
-@media screen and (max-width: 50em) {
+@media screen and (max-width: 51em) {
   .works-cards-container {
     grid-template-columns: 1fr; } }
 
@@ -416,7 +416,7 @@ html {
     font-size: 1.5rem;
     color: gray; }
   .works-card:hover {
-    background: #fdb533;
+    background: #feb633;
     cursor: pointer;
     transition: 0.6s; }
     .works-card:hover h3,
@@ -450,7 +450,7 @@ html {
       height: 0.4rem;
       bottom: -1rem;
       left: 0;
-      background-color: #fdb533; }
+      background-color: #feb633; }
   .hire-me p {
     margin-bottom: 5rem; }
 
@@ -468,7 +468,7 @@ html {
     padding-left: 5rem;
     font-weight: 40rem;
     margin-bottom: 15rem; }
-    @media screen and (max-width: 50em) {
+    @media screen and (max-width: 51em) {
       .contact-title {
         margin-bottom: 10rem;
         justify-self: left;
@@ -482,7 +482,7 @@ html {
         margin-bottom: 10rem; } }
   .contact h2 {
     position: absolute; }
-    @media screen and (max-width: 50em) {
+    @media screen and (max-width: 51em) {
       .contact h2 {
         font-size: 4.5rem;
         text-align: center;
@@ -495,7 +495,7 @@ html {
       height: 0.4rem;
       bottom: -1rem;
       left: 0;
-      background-color: #fdb533; }
+      background-color: #feb633; }
   .contact-info {
     grid-area: two;
     justify-self: center; }
@@ -523,7 +523,7 @@ html {
       color: #cccccc;
       text-decoration: none; }
       .contact-info .follow a:hover {
-        color: #fdb533; }
+        color: #feb633; }
   .contact .message-container {
     grid-area: four;
     color: #363737;
@@ -565,7 +565,7 @@ html {
       .contact-form-input:valid {
         border-bottom: 3px solid #2ecc71; }
       .contact-form-input:focus:invalid {
-        border-bottom: 3px solid #fd9533; }
+        border-bottom: 3px solid #feb633; }
     .contact-form-name-label {
       grid-column: 1 / span 2;
       grid-row: 1 / 2; }
@@ -663,14 +663,14 @@ html {
     height: 0.4rem;
     bottom: -1rem;
     left: 0%;
-    background-color: #fdb533; }
+    background-color: #feb633; }
 
 .slide-container .img {
   width: 15rem;
   height: 15rem;
   object-fit: cover;
-  border: 1px solid #fdb533;
-  background: #fdb533;
+  border: 1px solid #feb633;
+  background: #feb633;
   padding: 0.25rem;
   border-radius: 50%;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); }
@@ -698,7 +698,7 @@ html {
 .slide-container .quote-icon {
   font-size: 3rem;
   margin-top: 2rem;
-  color: #fdb533; }
+  color: #feb633; }
 
 /* set buttons */
 .btn {
@@ -778,7 +778,7 @@ html {
       height: 0.4rem;
       bottom: -1rem;
       left: 0;
-      background-color: #fdb533; }
+      background-color: #feb633; }
 
 .articles {
   width: 90vw;
@@ -849,7 +849,7 @@ html {
   animation-duration: 1s; }
 
 .modal-header {
-  background-color: #fdb533;
+  background-color: #feb633;
   color: white;
   padding: 1.5rem; }
 
@@ -906,7 +906,7 @@ html {
     line-height: 6rem;
     margin: 0.5rem 0 0.5rem 5rem; }
     .navbar-logo a {
-      color: #fbd214; }
+      color: #feb633; }
   .navbar ul li a:link {
     color: #fff;
     font-size: 2rem;
@@ -914,9 +914,9 @@ html {
   .navbar ul li a:visited {
     color: #fff; }
   .navbar ul li a:hover {
-    color: #fbd214; }
+    color: #feb633; }
   .navbar ul li a:active {
-    color: #fbd214; }
+    color: #feb633; }
   .navbar-menu {
     position: relative;
     margin-bottom: 0.5rem;
@@ -930,7 +930,7 @@ html {
     height: 0.2rem;
     bottom: 0;
     left: 10;
-    background-color: #fdb533;
+    background-color: #feb633;
     transition: all 0.3s ease-in-out; }
   .navbar-menu:hover::before {
     width: 50%; }
@@ -942,15 +942,15 @@ html {
     height: 0.2rem;
     bottom: 0;
     left: 10;
-    background-color: #fdb533;
+    background-color: #feb633;
     transition: all 0.3s ease-in-out; }
 
-@media screen and (min-width: 50em) {
+@media screen and (min-width: 51em) {
   .open {
     display: none; } }
 
 /*  menu item layout change with smaller screen */
-@media screen and (max-width: 50em) {
+@media screen and (max-width: 51em) {
   .navbar {
     align-items: stretch; }
     .navbar ul {
@@ -978,14 +978,14 @@ html {
       .modal-container ul li a {
         color: inherit; }
         .modal-container ul li a:hover {
-          color: #fbd214; }
+          color: #feb633; }
   .modal-container-logo {
     font-weight: 900;
     font-size: 5rem;
     line-height: 6rem;
     margin: 1.5rem 0 1.5rem 1rem; }
     .modal-container-logo a {
-      color: #fbd214; }
+      color: #feb633; }
   .modal-container button {
     background-color: #2b2c2c;
     border: #2b2c2c;
@@ -995,7 +995,7 @@ html {
     top: 3rem;
     right: 3rem; }
     .modal-container button:hover {
-      color: #fbd214; }
+      color: #feb633; }
   .modal-container.show-modal {
     display: inline-block; }
 
@@ -1046,8 +1046,8 @@ html {
   .hero img {
     width: 70%;
     border-radius: 49%;
-    border: 1px solid #fdb533;
-    background: #fdb533;
+    border: 1px solid #feb633;
+    background: #feb633;
     padding: 0.25rem;
     justify-self: start; }
     @media screen and (max-width: 41em) {
@@ -1068,7 +1068,7 @@ html {
     font-weight: 900;
     font-size: 7rem;
     line-height: 6rem;
-    color: #fbd214;
+    color: #feb633;
     padding-bottom: 2rem; }
   .closing p {
     text-align: center; }
@@ -1081,7 +1081,7 @@ html {
     text-decoration: none;
     color: rgba(255, 255, 255, 0.5); }
     .closing a:hover {
-      color: #fdb533; }
+      color: #feb633; }
 
 footer {
   grid-column: full-start / full-end;
@@ -1095,4 +1095,4 @@ footer {
       text-decoration: none;
       color: inherit; }
       footer p a:hover {
-        color: #fdb533; }
+        color: #feb633; }

@@ -1,7 +1,7 @@
 .services {
 	grid-column: full-start / full-end;
 	padding: 10rem 0;
-	background-color: #2b2c2c;
+	background-color: $color-background-2;
 
 	@media screen and (max-width: $bp-small) {
 		padding: 10rem 2rem;
@@ -29,7 +29,7 @@
 				height: 0.4rem;
 				bottom: -1rem;
 				left: 0;
-				background-color: #fdb533;
+				background-color: $yellow-color;
 			}
 		}
 

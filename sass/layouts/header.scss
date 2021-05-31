@@ -1,6 +1,6 @@
 .hero {
 	grid-column: full-start / full-end;
-	background-color: #2b2c2c;
+	background-color: $color-background-2;
 	padding: 20rem 0;
 	display: grid;
 	/* Making grid responsive without media queries:
@@ -44,8 +44,8 @@
 	& img {
 		width: 70%;
 		border-radius: 49%;
-		border: 1px solid #fdb533;
-		background: #fdb533;
+		border: 1px solid $yellow-color;
+		background: $yellow-color;
 		padding: 0.25rem;
 		justify-self: start;
 
