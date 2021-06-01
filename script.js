@@ -203,6 +203,9 @@ async function getData(url) {
 		cacheData.data = data;
 	} catch (error) {
 		console.log('THERE WAS AN ERROR: ', error.message);
+		//fallback data
+		const fallbackData = cacheData.data;
+		renderData(rootNode, fallbackData);
 	}
 }
 
