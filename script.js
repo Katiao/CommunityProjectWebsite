@@ -166,9 +166,23 @@ prevBtn.addEventListener('click', () => {
 /* *********************Blog section - fetch data from API using Strapi *********************************** */
 
 const BLOG_URL = 'https://pure-atoll-89315.herokuapp.com/blogs';
-const rootNode = document.getElementById('articles');
-//modalNode is the root of the Modal
-const modalNode = document.getElementById('blog-modal');
+const articlesContainer = document.getElementById('articles');
+//modalContainer is the root of the Modal
+const modalContainer = document.getElementById('blog-modal');
+const loader = document.getElementById('loader')
+
+//show loading
+function loading(){
+	loader.hidden = false;
+	articlesContainer.hidden = true;
+
+}
+
+//hide loading
+function complete() {
+	articlesContainer.hidden = false;
+	loader.hidden = true;
+}
 
 //function that generates blog HTML template:
 function blogHTMLTemplate(data) {
@@ -195,17 +209,20 @@ function renderData(node, data) {
 
 //Fetch data from Strapi API
 async function getData(url) {
+	loading();
 	try {
 		const response = await fetch(url);
 		const data = await response.json();
-		renderData(rootNode, data);
+		renderData(articlesContainer, data);
+		//after data rendered, hide loader
+		complete();
 		//set global cache to prevent duplicate queries:
 		cacheData.data = data;
 	} catch (error) {
 		console.log('THERE WAS AN ERROR: ', error.message);
 		//fallback data
 		const fallbackData = cacheData.data;
-		renderData(rootNode, fallbackData);
+		renderData(articlesContainer, fallbackData);
 	}
 }
 
@@ -255,24 +272,24 @@ function showBlogModal(e) {
 	const targetID = Number(e.target.id);
 	if (e.target.className === 'btn-more') {
 		var selectedData = cacheData.data[targetID - 1];
-		modalNode.classList.add('show-blog-modal');
-		renderModalData(modalNode, [selectedData]);
+		modalContainer.classList.add('show-blog-modal');
+		renderModalData(modalContainer, [selectedData]);
 	}
 }
 
 //add event listener on root of Modal
-modalNode.addEventListener('click', rootClick);
+modalContainer.addEventListener('click', rootClick);
 
 //hide modal upon root click (clicking anywhere on page)
 function rootClick() {
-	modalNode.classList.remove('show-blog-modal');
+	modalContainer.classList.remove('show-blog-modal');
 }
 
 //Hide modal when clicking on close button:
 document.body.addEventListener('click', hideBlogModal);
 function hideBlogModal(e) {
 	if (e.target.parentElement.className === 'close-btn') {
-		modalNode.classList.remove('show-blog-modal');
+		modalContainer.classList.remove('show-blog-modal');
 	}
 }
 
@@ -287,7 +304,7 @@ function keepOpen(e) {
 		e.target.className === 'post-info' ||
 		e.target.className === 'heading'
 	) {
-		modalNode.classList.add('show-blog-modal');
-		console.log(e);
+		modalContainer.classList.add('show-blog-modal');
+
 	}
 }
