@@ -1187,11 +1187,11 @@ html {
   transition: all 0.3s ease-in-out;
 }
 
-/*@media screen and (min-width: 801px) {
-	& .open {
-		display: none;
-	}
-} */
+@media screen and (min-width: 801px) {
+  .open {
+    display: none;
+  }
+}
 /*  menu item layout change with smaller screen */
 @media screen and (max-width: 50em) {
   .navbar {
@@ -1256,15 +1256,16 @@ html {
 }
 
 /* open button styling */
-/*.open {
-	background-color: $color-background-2;
-	border: $color-background-2;
-	color: #fff;
-	position: absolute;
-	top: 2rem;
-	right: 2rem;
-	cursor: pointer;
-} */
+.open {
+  background-color: #2b2c2c;
+  border: #2b2c2c;
+  color: #fff;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  cursor: pointer;
+}
+
 .hero {
   grid-column: full-start/full-end;
   background-color: #2b2c2c;
